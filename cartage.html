@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartage | MidDesign</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Jacquard+12&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* ── Cartage: project-specific image overrides ── */
+        .proj-cover__img--cartage { background: url('images/cartage-cover.png') center / cover no-repeat; }
+        .proj-cover__img--cartage::after { display: none; }
+
+        .proj-img--a { background: url('images/cartage-2col-1.png') center / cover no-repeat; }
+        .proj-img--b { background: url('images/cartage-2col-2.png') center / cover no-repeat; }
+        .proj-img--c { background: url('images/cartage-3col-1.png') center / cover no-repeat; }
+        .proj-img--d { background: url('images/cartage-3col-2.png') center / cover no-repeat; }
+        .proj-img--e { background: url('images/cartage-3col-3.png') center / cover no-repeat; }
+        .proj-img--f { background: url('images/cartage-panoramic.png') center / cover no-repeat; }
+        .proj-img--h { background: url('images/cartage-asym.png') center / cover no-repeat; }
+
+        /* Video slot — matches proj-img sizing behaviour */
+        .proj-img--video {
+            position: relative;
+            aspect-ratio: 4 / 3;
+            overflow: hidden;
+            background: #161616;
+        }
+
+        .proj-img--video video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: left center;
+        }
+    </style>
+</head>
+<body data-page="work">
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <a href="index.html" class="nav__logo">MidDesign</a>
+        <ul class="nav__links">
+            <li><a href="work.html">Work</a></li>
+            <li><a href="solutions.html">Solutions</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" class="nav__cta">Start a Project</a></li>
+        </ul>
+        <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="work.html" class="mobile-link">Work</a></li>
+            <li><a href="solutions.html" class="mobile-link">Solutions</a></li>
+            <li><a href="about.html" class="mobile-link">About</a></li>
+            <li><a href="contact.html" class="mobile-link">Start a Project</a></li>
+        </ul>
+    </div>
+
+    <!-- Project Hero -->
+    <section class="proj-hero">
+        <div class="proj-hero__bg-text" aria-hidden="true">CART</div>
+        <div class="container">
+            <div class="proj-hero__label">
+                <span class="page-hero__label-rule"></span>
+                UI Icon Design, 2024
+            </div>
+            <h1 class="proj-hero__title">Cartage</h1>
+        </div>
+    </section>
+
+    <!-- Metadata Strip -->
+    <div class="proj-meta">
+        <div class="container">
+            <div class="proj-meta__grid">
+                <div class="proj-meta__item">
+                    <span class="proj-meta__label">Client</span>
+                    <span class="proj-meta__value">Cartage</span>
+                </div>
+                <div class="proj-meta__item">
+                    <span class="proj-meta__label">Year</span>
+                    <span class="proj-meta__value">2024</span>
+                </div>
+                <div class="proj-meta__item">
+                    <span class="proj-meta__label">Services</span>
+                    <span class="proj-meta__value">UI Icon Design, Visual System</span>
+                </div>
+                <div class="proj-meta__item">
+                    <span class="proj-meta__label">Role</span>
+                    <span class="proj-meta__value">Brand Designer</span>
+                </div>
+                <div class="proj-meta__item proj-meta__item--cta">
+                    <a href="contact.html" class="btn btn--primary">Start a Project <span class="arrow">→</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cover Image -->
+    <div class="proj-cover">
+        <div class="proj-cover__img proj-cover__img--cartage"></div>
+    </div>
+
+    <!-- Overview: About Brand + My Deliverable -->
+    <section class="section section--alt">
+        <div class="container">
+            <div class="proj-overview fade-in">
+                <div class="proj-overview__text">
+                    <div class="proj-callout__label">About the Brand</div>
+                    <p class="proj-callout__text">Cartage is an AI-native logistics platform that functions as an autonomous operating system for freight coordination.</p>
+                </div>
+                <div class="proj-overview__details">
+                    <div class="proj-detail">
+                        <span class="proj-detail__label">My Deliverable</span>
+                        <ul class="proj-detail__list">
+                            <li>Build a system of icons to be utilized throughout their platform's UI</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Grid 01 — 2 col -->
+    <div class="proj-images">
+        <div class="proj-img-grid proj-img-grid--2col">
+            <div class="proj-img proj-img--a fade-in"></div>
+            <div class="proj-img proj-img--b fade-in"></div>
+        </div>
+    </div>
+
+    <!-- Section 01: The Challenge -->
+    <section class="section">
+        <div class="container">
+            <div class="proj-block fade-in">
+                <div class="proj-block__header">
+                    <span class="proj-block__num" aria-hidden="true">01</span>
+                    <h2 class="proj-block__title">The Challenge</h2>
+                </div>
+                <div class="proj-block__body">
+                    <p class="proj-block__hook">The goal was to design a system of icons that makes Cartage's operating system more intuitive while elevating the brand's visual identity to match their product's quality.</p>
+                    <p>Tech is a notoriously opaque industry. For all the talk about algorithms, data, and AI, it can still be a challenge for customers to understand how it all fits together to meet their business needs. This is great for creating mystique and allure, but at the same time, I think it makes it difficult for tech brands to connect their products with users. They still need to be intuitive enough for someone to sit down at an application and understand what they're looking at and how to interact with it, on day one.</p>
+                    <p>Being an AI native platform, Cartage is at the bleeding edge of modern technology. Part of their struggle is in making the connection between their clients' workflow and the capabilities of their AI. Cartage brought me on to build out a visual language for their operating system. Creating icons to break down the barrier between their advanced system and the average shipping and logistics client. All while leveling up the look of the brand to match the quality of their product.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Grid 02 — 3 col -->
+    <div class="proj-images">
+        <div class="proj-img-grid proj-img-grid--3col">
+            <div class="proj-img proj-img--c fade-in"></div>
+            <div class="proj-img proj-img--d fade-in"></div>
+            <div class="proj-img proj-img--e fade-in"></div>
+        </div>
+    </div>
+
+    <!-- Section 02: The Approach -->
+    <section class="section section--alt">
+        <div class="container">
+            <div class="proj-block fade-in">
+                <div class="proj-block__header">
+                    <span class="proj-block__num" aria-hidden="true">02</span>
+                    <h2 class="proj-block__title">The Approach</h2>
+                </div>
+                <div class="proj-block__body">
+                    <p class="proj-block__hook">Soft, glossy textures and monochromatic color palettes give an ethereal quality, while the objects themselves mimic real-world counterparts that people are familiar with.</p>
+                    <p>I looked back at the ways that tech has explained itself in the past. Apple's use of skeuomorphism was pivotal in making the digital landscape accessible for people to adopt on day one. Today, the minimal, flat-design aesthetic that has been popular in design lately isn't effective in communicating complex subjects. I wanted there to be detail in my designs, the way skeuomorphism is, but I wanted to put a modern twist on it. Just making icons look like real-world objects, in the way Apple did in the early 2000s, was not going to demonstrate the modern ingenuity of the company.</p>
+                    <p>I achieved that modern look by finding a balance between flat illustration and photo realism. The objects are simplified slightly to increase legibility and help with scaling across but subtle textures, transparency and reflections are used to add depth. This allows the objects to feel tangible but not something you might find in the physical world. The Monochromatic yet detailed styling also plays into this same effect.</p>
+                    <p>Integrating their AI agent, Wilson's, face into this icon also ties in the fact that all of these tools are part of their AI system. It lets the customer know that Wilson is connected to every part of the process.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Width Image -->
+    <div class="proj-images">
+        <div class="proj-img proj-img--full proj-img--f fade-in"></div>
+    </div>
+
+    <!-- Section 03: The Outcome + Results -->
+    <section class="section">
+        <div class="container">
+            <div class="proj-block fade-in">
+                <div class="proj-block__header">
+                    <span class="proj-block__num" aria-hidden="true">03</span>
+                    <h2 class="proj-block__title">The Outcome</h2>
+                </div>
+                <div class="proj-block__body">
+                    <p class="proj-block__hook">This project sets Cartage up to expand on their identity to create a UI that is unique and innovative.</p>
+                    <p>The way I interpreted this project helped the brand understand the bigger picture of how to present itself to the world. It gave them perspective on how to think about their brand as a whole.</p>
+                </div>
+            </div>
+            <div class="proj-results fade-in">
+                <div class="proj-result">
+                    <span class="proj-result__num">100%</span>
+                    <span class="proj-result__label">Decrease in customer calls for walkthroughs and tutorials</span>
+                </div>
+                <div class="proj-result">
+                    <span class="proj-result__num">+60%</span>
+                    <span class="proj-result__label">Increase in customer comprehension</span>
+                </div>
+                <div class="proj-result">
+                    <span class="proj-result__num">1</span>
+                    <span class="proj-result__label">Unified visual language across the entire platform UI</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Grid 03 — 2 col asymmetric (video + still) -->
+    <div class="proj-images">
+        <div class="proj-img-grid proj-img-grid--asym">
+            <div class="proj-img proj-img--video fade-in">
+                <video autoplay loop muted playsinline>
+                    <source src="images/cartage-vid.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="proj-img proj-img--h fade-in"></div>
+        </div>
+    </div>
+
+    <!-- Next Project -->
+    <section class="proj-next">
+        <div class="container">
+            <div class="proj-next__label">
+                <span class="page-hero__label-rule"></span>
+                Next Project
+            </div>
+            <a href="proud-source-water.html" class="proj-next__card fade-in">
+                <div class="proj-next__img proj-next__img--proud-source"></div>
+                <div class="proj-next__info">
+                    <div class="proj-next__tags">
+                        <span class="tag">Brand Identity</span>
+                        <span class="tag">Marketing Strategy</span>
+                    </div>
+                    <h2 class="proj-next__title">Proud Source Water</h2>
+                    <span class="proj-next__cta">View Project <span class="arrow">→</span></span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- CTA Band -->
+    <div class="cta-band">
+        <div class="cta-band__bg" aria-hidden="true">LET'S GO</div>
+        <div class="container">
+            <div class="cta-band__inner">
+                <h2 class="cta-band__headline">Like what<br>you <em>see?</em></h2>
+                <a href="contact.html" class="btn btn--inverse">Start a Project <span class="arrow">→</span></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <a href="index.html" class="footer__logo">MidDesign</a>
+                    <p class="footer__tagline">Graphic design that gets noticed.</p>
+                </div>
+                <nav class="footer__nav">
+                    <div class="footer__col">
+                        <span class="footer__col-title">Navigate</span>
+                        <ul>
+                            <li><a href="work.html">Work</a></li>
+                            <li><a href="solutions.html">Solutions</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <span class="footer__col-title">Solutions</span>
+                        <ul>
+                            <li><a href="solutions.html">Brand Architecture</a></li>
+                            <li><a href="solutions.html">Visual Language</a></li>
+                            <li><a href="solutions.html">Brand Positioning</a></li>
+                            <li><a href="solutions.html">Campaign &amp; Activation</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <span class="footer__col-title">Connect</span>
+                        <ul>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Behance</a></li>
+                            <li><a href="#">LinkedIn</a></li>
+                            <li><a href="mailto:adrian.cole@middesignstudio.com">Email</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="footer__bottom">
+                <span>© 2026 MidDesign. All rights reserved.</span>
+                <span>Designed with intention.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

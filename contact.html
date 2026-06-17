@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | MidDesign</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Jacquard+12&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="contact">
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <a href="index.html" class="nav__logo">MidDesign</a>
+        <ul class="nav__links">
+            <li><a href="work.html">Work</a></li>
+            <li><a href="solutions.html">Solutions</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" class="nav__cta">Start a Project</a></li>
+        </ul>
+        <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="work.html" class="mobile-link">Work</a></li>
+            <li><a href="solutions.html" class="mobile-link">Solutions</a></li>
+            <li><a href="about.html" class="mobile-link">About</a></li>
+            <li><a href="contact.html" class="mobile-link">Start a Project</a></li>
+        </ul>
+    </div>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="page-hero__bg-text" aria-hidden="true">TALK</div>
+        <div class="container">
+            <div class="page-hero__label">
+                <span class="page-hero__label-rule"></span>
+                Get in Touch
+            </div>
+            <h1 class="page-hero__title">Start a<br>Project</h1>
+            <p class="page-hero__sub">Tell me what you're building. We'll think it through together before a single mark is made.</p>
+        </div>
+    </section>
+
+    <!-- Contact Layout -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-layout">
+                <div class="contact-info fade-in">
+                    <h3 class="contact-tagline">
+                        Let's build something that <em>means</em> something.
+                    </h3>
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <span class="contact-detail__label">Email</span>
+                            <a href="mailto:adrian.cole@middesignstudio.com" class="contact-detail__value">adrian.cole@middesignstudio.com</a>
+                        </div>
+                        <div class="contact-detail">
+                            <span class="contact-detail__label">Based in</span>
+                            <span class="contact-detail__value">Available Worldwide</span>
+                        </div>
+                        <div class="contact-detail">
+                            <span class="contact-detail__label">Response Time</span>
+                            <span class="contact-detail__value">Within 24 hours</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form fade-in" id="contactForm" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="jane@company.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Needed</label>
+                        <div class="select-wrap">
+                            <select id="service" name="service">
+                                <option value="" disabled selected>Select a service</option>
+                                <option value="brand">Brand Architecture</option>
+                                <option value="visual">Visual Language</option>
+                                <option value="positioning">Brand Positioning</option>
+                                <option value="campaign">Campaign &amp; Activation</option>
+                                <option value="other">Other / Not Sure Yet</option>
+                            </select>
+                            <span class="select-arrow">↓</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Project Details</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project, timeline, and budget..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full">
+                        Send Message <span class="arrow">→</span>
+                    </button>
+                    <div class="form-success" id="formSuccess">
+                        Message sent! I'll be in touch within 24 hours.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <a href="index.html" class="footer__logo">MidDesign</a>
+                    <p class="footer__tagline">Design that thinks before it speaks.</p>
+                </div>
+                <nav class="footer__nav">
+                    <div class="footer__col">
+                        <span class="footer__col-title">Navigate</span>
+                        <ul>
+                            <li><a href="work.html">Work</a></li>
+                            <li><a href="solutions.html">Solutions</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <span class="footer__col-title">Solutions</span>
+                        <ul>
+                            <li><a href="solutions.html">Brand Architecture</a></li>
+                            <li><a href="solutions.html">Visual Language</a></li>
+                            <li><a href="solutions.html">Brand Positioning</a></li>
+                            <li><a href="solutions.html">Campaign &amp; Activation</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <span class="footer__col-title">Connect</span>
+                        <ul>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Behance</a></li>
+                            <li><a href="#">LinkedIn</a></li>
+                            <li><a href="mailto:adrian.cole@middesignstudio.com">Email</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="footer__bottom">
+                <span>© 2026 MidDesign. All rights reserved.</span>
+                <span>Designed with intention.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

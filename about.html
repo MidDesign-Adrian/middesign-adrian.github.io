@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | MidDesign</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Jacquard+12&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="about">
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <a href="index.html" class="nav__logo">MidDesign</a>
+        <ul class="nav__links">
+            <li><a href="work.html">Work</a></li>
+            <li><a href="solutions.html">Solutions</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" class="nav__cta">Start a Project</a></li>
+        </ul>
+        <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="work.html" class="mobile-link">Work</a></li>
+            <li><a href="solutions.html" class="mobile-link">Solutions</a></li>
+            <li><a href="about.html" class="mobile-link">About</a></li>
+            <li><a href="contact.html" class="mobile-link">Start a Project</a></li>
+        </ul>
+    </div>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="page-hero__bg-text" aria-hidden="true">MID</div>
+        <div class="container">
+            <div class="page-hero__label">
+                <span class="page-hero__label-rule"></span>
+                The Studio
+            </div>
+            <h1 class="page-hero__title">About</h1>
+            <p class="page-hero__sub">Independent. Intentional. Built on the belief that design is strategy made visible.</p>
+        </div>
+    </section>
+
+    <!-- About Layout -->
+    <section class="section">
+        <div class="container">
+            <div class="about-layout">
+                <div class="about-visual fade-in">
+                    <div class="about-img-wrap">
+                        <img src="images/IMG_1321.jpg" alt="Adrian Cole" class="about-img">
+                    </div>
+                </div>
+                <div class="about-text fade-in">
+                    <h2 class="about-headline">Adrian Cole</h2>
+                    <p class="about-role" style="font-size: 0.875rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem;">Founder / Visual Designer</p>
+                    <p>
+                        I'm a multi-disciplinary visual designer with 7+ years of experience delivering creative solutions to clients across the world. Whether it's creating modern brand identities, building websites from the ground up, or developing visual marketing strategies, I have a proven ability to produce results.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat__num">100's</span>
+                            <span class="stat__label">Projects Delivered</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat__num">50+</span>
+                            <span class="stat__label">Happy Clients</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat__num">7+</span>
+                            <span class="stat__label">Years Experience</span>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn btn--primary">Work Together <span class="arrow">→</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Band -->
+    <section class="about-philosophy">
+        <div class="container">
+            <div class="page-hero__label fade-in">
+                <span class="page-hero__label-rule"></span>
+                Philosophy
+            </div>
+            <h2 class="about-philosophy__headline fade-in">
+                Living in the<br><em>middle</em> of design.
+            </h2>
+            <p class="about-philosophy__body fade-in">
+                MidDesign is an independent design studio built on the idea of living in the middle of design. Embracing the process, not just the outcome, allows for a deeper exploration of the subject matter. Staying invested in the work and remaining open to the natural flow of ideas creates a more authentic message that ultimately results in a better connection with your audience and a better growing business.
+            </p>
+            <p class="about-philosophy__body about-philosophy__body--closing fade-in">
+                The result is design that doesn't just look good… <span style="color: var(--accent);">it works.</span>
+            </p>
+            <div class="about-tenets fade-in">
+                <div class="tenet">
+                    <span class="tenet__title">Commit</span>
+                    <p class="tenet__desc">Approach every project with intention, paying attention to each design decision and how it impacts the overall system.</p>
+                </div>
+                <div class="tenet">
+                    <span class="tenet__title">Be Curious</span>
+                    <p class="tenet__desc">Explore new ideas, technologies, and perspectives to uncover distinctive solutions that push boundaries and elevate user experience.</p>
+                </div>
+                <div class="tenet">
+                    <span class="tenet__title">Have Fun</span>
+                    <p class="tenet__desc">Design with enthusiasm and authenticity. Designing personally inspired work will ultimately better resonate with audiences and leave lasting impressions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Grid -->
+    <section class="about-clients">
+        <div class="container">
+            <div class="section__header">
+                <div>
+                    <h2 class="section__title">Clients &amp; Collaborators</h2>
+                    <p class="section__sub">Brands we've had the pleasure of building with.</p>
+                </div>
+            </div>
+
+            <div class="about-clients__grid">
+                <div class="client-cell fade-in"><span class="client-cell__name">Cartage AI</span></div>
+                <div class="client-cell fade-in"><span class="client-cell__name">Breg Inc.</span></div>
+                <div class="client-cell fade-in"><span class="client-cell__name">Dotmatics</span></div>
+                <div class="client-cell fade-in"><span class="client-cell__name">Siemens</span></div>
+                <div class="client-cell fade-in"><span class="client-cell__name">Proud Source</span></div>
+                <div class="client-cell fade-in"><span class="client-cell__name">Sköna</span></div>
+                <div class="client-cell fade-in"><span class="client-cell__name">Creative Circle</span></div>
+                <div class="client-cell fade-in"><span class="client-cell__name">Delinea</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Band -->
+    <div class="cta-band">
+        <div class="cta-band__bg" aria-hidden="true">LET'S GO</div>
+        <div class="container">
+            <div class="cta-band__inner">
+                <h2 class="cta-band__headline">Let's build<br>something <em>together.</em></h2>
+                <a href="contact.html" class="btn btn--inverse">Start a Project <span class="arrow">→</span></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <a href="index.html" class="footer__logo">MidDesign</a>
+                    <p class="footer__tagline">Design that thinks before it speaks.</p>
+                </div>
+                <nav class="footer__nav">
+                    <div class="footer__col">
+                        <span class="footer__col-title">Navigate</span>
+                        <ul>
+                            <li><a href="work.html">Work</a></li>
+                            <li><a href="solutions.html">Solutions</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <span class="footer__col-title">Solutions</span>
+                        <ul>
+                            <li><a href="solutions.html">Brand Architecture</a></li>
+                            <li><a href="solutions.html">Visual Language</a></li>
+                            <li><a href="solutions.html">Brand Positioning</a></li>
+                            <li><a href="solutions.html">Campaign &amp; Activation</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <span class="footer__col-title">Connect</span>
+                        <ul>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Behance</a></li>
+                            <li><a href="#">LinkedIn</a></li>
+                            <li><a href="mailto:adrian.cole@middesignstudio.com">Email</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="footer__bottom">
+                <span>© 2026 MidDesign. All rights reserved.</span>
+                <span>Designed with intention.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

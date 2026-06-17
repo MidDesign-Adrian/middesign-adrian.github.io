@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dotmatics | MidDesign</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Jacquard+12&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* ── Dotmatics: project-specific image overrides ── */
+        .proj-cover__img--dotmatics { background: url('images/dot-cover.png') center / cover no-repeat; }
+        .proj-cover__img--dotmatics::after { display: none; }
+
+        .proj-img--a { background: url('images/dot-2col-1.png') center / cover no-repeat; }
+
+        /* Video slot — matches proj-img sizing behaviour */
+        .proj-img--video {
+            position: relative;
+            aspect-ratio: 4 / 3;
+            overflow: hidden;
+            background: #161616;
+        }
+        .proj-img--video video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .proj-img--c { background: url('images/dot-3col-1.png') center / cover no-repeat; }
+        .proj-img--d { background: url('images/dot-3col-2.png') center / cover no-repeat; }
+        .proj-img--e { background: url('images/dot-3col-3.png') center / cover no-repeat; }
+        .proj-img--f { background: url('images/dot-panoramic.png') center / cover no-repeat; }
+        .proj-img--g { background: url('images/dot-asym-wide.png') center / cover no-repeat; }
+        .proj-img--h { background: url('images/dot-asym-tall.png') center / cover no-repeat; }
+    </style>
+</head>
+<body data-page="work">
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <a href="index.html" class="nav__logo">MidDesign</a>
+        <ul class="nav__links">
+            <li><a href="work.html">Work</a></li>
+            <li><a href="solutions.html">Solutions</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" class="nav__cta">Start a Project</a></li>
+        </ul>
+        <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="work.html" class="mobile-link">Work</a></li>
+            <li><a href="solutions.html" class="mobile-link">Solutions</a></li>
+            <li><a href="about.html" class="mobile-link">About</a></li>
+            <li><a href="contact.html" class="mobile-link">Start a Project</a></li>
+        </ul>
+    </div>
+
+    <!-- Project Hero -->
+    <section class="proj-hero">
+        <div class="proj-hero__bg-text" aria-hidden="true">DOTM</div>
+        <div class="container">
+            <div class="proj-hero__label">
+                <span class="page-hero__label-rule"></span>
+                Brand Design &amp; Marketing, 2023–2025
+            </div>
+            <h1 class="proj-hero__title">Dotmatics</h1>
+        </div>
+    </section>
+
+    <!-- Metadata Strip -->
+    <div class="proj-meta">
+        <div class="container">
+            <div class="proj-meta__grid">
+                <div class="proj-meta__item">
+                    <span class="proj-meta__label">Client</span>
+                    <span class="proj-meta__value">Dotmatics</span>
+                </div>
+                <div class="proj-meta__item">
+                    <span class="proj-meta__label">Year</span>
+                    <span class="proj-meta__value">2023–2025</span>
+                </div>
+                <div class="proj-meta__item">
+                    <span class="proj-meta__label">Services</span>
+                    <span class="proj-meta__value">Brand Design, Marketing</span>
+                </div>
+                <div class="proj-meta__item">
+                    <span class="proj-meta__label">Role</span>
+                    <span class="proj-meta__value">Brand Designer</span>
+                </div>
+                <div class="proj-meta__item proj-meta__item--cta">
+                    <a href="contact.html" class="btn btn--primary">Start a Project <span class="arrow">→</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cover Image -->
+    <div class="proj-cover">
+        <div class="proj-cover__img proj-cover__img--dotmatics"></div>
+    </div>
+
+    <!-- Overview: About Brand + My Deliverable -->
+    <section class="section section--alt">
+        <div class="container">
+            <div class="proj-overview fade-in">
+                <div class="proj-overview__text">
+                    <div class="proj-callout__label">About the Brand</div>
+                    <p class="proj-callout__text">Dotmatics is a scientific software company focused on life sciences R&amp;D, building tools that help researchers manage, visualize, and act on complex scientific data.</p>
+                </div>
+                <div class="proj-overview__details">
+                    <div class="proj-detail">
+                        <span class="proj-detail__label">My Deliverable</span>
+                        <ul class="proj-detail__list">
+                            <li>Brand Identity System</li>
+                            <li>Subsidiary Brand Architecture</li>
+                            <li>Marketing &amp; Campaign Design</li>
+                            <li>Brand Guidelines</li>
+                            <li>Digital &amp; Social Templates</li>
+                            <li>Sales &amp; Presentation Design</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Grid 01 — 2 col -->
+    <div class="proj-images">
+        <div class="proj-img-grid proj-img-grid--2col">
+            <div class="proj-img proj-img--a fade-in"></div>
+            <div class="proj-img proj-img--video fade-in">
+                <video autoplay loop muted playsinline>
+                    <source src="images/dot-vid.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 01: The Challenge -->
+    <section class="section">
+        <div class="container">
+            <div class="proj-block fade-in">
+                <div class="proj-block__header">
+                    <span class="proj-block__num" aria-hidden="true">01</span>
+                    <h2 class="proj-block__title">The Challenge</h2>
+                </div>
+                <div class="proj-block__body">
+                    <p class="proj-block__hook">When I was brought on, Dotmatics had just been acquired by Insightful Science. The business decided that the Dotmatics brand was stronger and elected to drop the Insightful Science name and branding.</p>
+                    <p>It can be difficult to bring all these businesses together and make them feel like one cohesive team. I've seen smaller companies struggle with inconsistent messaging when different departments or product lines each want to do it their own way. That's why creating a system that allows for each brand to be represented appropriately was so important. Trying to balance branding to each application is only going to make a disconnected group of individuals rather than a united front.</p>
+                    <p>Each of the subsidiary brands had its own branding — different logos, different type, different color palettes, graphics elements, and standards for their marketing materials. Each of the brands is a different product, which means different audiences and different strengths to highlight in their communication.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Grid 02 — 3 col -->
+    <div class="proj-images">
+        <div class="proj-img-grid proj-img-grid--3col">
+            <div class="proj-img proj-img--c fade-in"></div>
+            <div class="proj-img proj-img--d fade-in"></div>
+            <div class="proj-img proj-img--e fade-in"></div>
+        </div>
+    </div>
+
+    <!-- Section 02: The Approach -->
+    <section class="section section--alt">
+        <div class="container">
+            <div class="proj-block fade-in">
+                <div class="proj-block__header">
+                    <span class="proj-block__num" aria-hidden="true">02</span>
+                    <h2 class="proj-block__title">The Approach</h2>
+                </div>
+                <div class="proj-block__body">
+                    <p class="proj-block__hook">The way I solved the problem of each brand wanting to do its own thing was a combination of things — the most important being to give them enough elements to work with so that they could create designs that work for their purposes, but that the other thing they all have in common is Dotmatics.</p>
+                    <p>I created rules for how to implement each of those elements — detailed descriptions of what to look for when trying to find new photography, how to write rules for how their social presence looks, and how their brand's YouTube thumbnails look. Their logos were systematized, and so on.</p>
+                    <p>I built them an entire ecosystem in Figma where everything is easily accessible to everyone in the company. Also, I created rules for how to implement each of those elements — like a detailed description of what to look for when trying to find new photography. I set rules for how their social presence looks, how their YouTube thumbnails look, and their logos were systematized.</p>
+                    <p>As the business has expanded, I have added and subtracted things from this identity — everything is designed to grow and change, but having a strong framework from which to build is essential to maintaining a uniform side of brands.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Width Image -->
+    <div class="proj-images">
+        <div class="proj-img proj-img--full proj-img--f fade-in"></div>
+    </div>
+
+    <!-- Section 03: The Outcome + Results -->
+    <section class="section">
+        <div class="container">
+            <div class="proj-block fade-in">
+                <div class="proj-block__header">
+                    <span class="proj-block__num" aria-hidden="true">03</span>
+                    <h2 class="proj-block__title">The Outcome</h2>
+                </div>
+                <div class="proj-block__body">
+                    <p class="proj-block__hook">Over the last two years, that foundation has continued to grow into a fully developed ecosystem — tested and expanded across one-pagers, social graphics, presentations, and marketing materials.</p>
+                    <p>As the company evolved, the design system evolved with it — absorbing new subsidiaries and meeting new demands, all while maintaining a uniform face for the organization. The brand system helped support Dotmatics through a period of rapid growth, acquiring more than two million scientists across 180+ countries, and was ultimately acquired by Siemens for $5.1 billion. The design system I provided created the foundation that allowed for that growth.</p>
+                </div>
+            </div>
+            <div class="proj-results fade-in">
+                <div class="proj-result">
+                    <span class="proj-result__num">2M+</span>
+                    <span class="proj-result__label">Scientists supported across 180+ countries</span>
+                </div>
+                <div class="proj-result">
+                    <span class="proj-result__num">$5.1B</span>
+                    <span class="proj-result__label">Acquisition by Siemens</span>
+                </div>
+                <div class="proj-result">
+                    <span class="proj-result__num">1</span>
+                    <span class="proj-result__label">Unified brand system across all subsidiary brands</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Grid 03 — 2 col asymmetric -->
+    <div class="proj-images">
+        <div class="proj-img-grid proj-img-grid--asym">
+            <div class="proj-img proj-img--g fade-in"></div>
+            <div class="proj-img proj-img--h fade-in"></div>
+        </div>
+    </div>
+
+    <!-- Next Project -->
+    <section class="proj-next">
+        <div class="container">
+            <div class="proj-next__label">
+                <span class="page-hero__label-rule"></span>
+                Next Project
+            </div>
+            <a href="cartage.html" class="proj-next__card fade-in">
+                <div class="proj-next__img proj-next__img--cartage"></div>
+                <div class="proj-next__info">
+                    <div class="proj-next__tags">
+                        <span class="tag">Brand Identity</span>
+                        <span class="tag">Visual System</span>
+                    </div>
+                    <h2 class="proj-next__title">Cartage</h2>
+                    <span class="proj-next__cta">View Project <span class="arrow">→</span></span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- CTA Band -->
+    <div class="cta-band">
+        <div class="cta-band__bg" aria-hidden="true">LET'S GO</div>
+        <div class="container">
+            <div class="cta-band__inner">
+                <h2 class="cta-band__headline">Like what<br>you <em>see?</em></h2>
+                <a href="contact.html" class="btn btn--inverse">Start a Project <span class="arrow">→</span></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <a href="index.html" class="footer__logo">MidDesign</a>
+                    <p class="footer__tagline">Graphic design that gets noticed.</p>
+                </div>
+                <nav class="footer__nav">
+                    <div class="footer__col">
+                        <span class="footer__col-title">Navigate</span>
+                        <ul>
+                            <li><a href="work.html">Work</a></li>
+                            <li><a href="solutions.html">Solutions</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <span class="footer__col-title">Solutions</span>
+                        <ul>
+                            <li><a href="solutions.html">Brand Architecture</a></li>
+                            <li><a href="solutions.html">Visual Language</a></li>
+                            <li><a href="solutions.html">Brand Positioning</a></li>
+                            <li><a href="solutions.html">Campaign &amp; Activation</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <span class="footer__col-title">Connect</span>
+                        <ul>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Behance</a></li>
+                            <li><a href="#">LinkedIn</a></li>
+                            <li><a href="mailto:adrian.cole@middesignstudio.com">Email</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="footer__bottom">
+                <span>© 2026 MidDesign. All rights reserved.</span>
+                <span>Designed with intention.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

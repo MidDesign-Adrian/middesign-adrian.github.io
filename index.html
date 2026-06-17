@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MidDesign | Graphic Design Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Jacquard+12&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="home">
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <a href="index.html" class="nav__logo">MidDesign</a>
+        <ul class="nav__links">
+            <li><a href="work.html">Work</a></li>
+            <li><a href="solutions.html">Solutions</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" class="nav__cta">Start a Project</a></li>
+        </ul>
+        <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="work.html" class="mobile-link">Work</a></li>
+            <li><a href="solutions.html" class="mobile-link">Solutions</a></li>
+            <li><a href="about.html" class="mobile-link">About</a></li>
+            <li><a href="contact.html" class="mobile-link">Start a Project</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero__img" aria-hidden="true"></div>
+        <div class="hero__bg-text" aria-hidden="true">MID</div>
+        <div class="hero__content">
+            <div class="hero__label">
+                <span class="hero__label-rule"></span>
+                Graphic Design Studio
+            </div>
+            <h1 class="hero__headline">
+                <span class="line"><span class="line-inner">Design built</span></span>
+                <span class="line"><span class="line-inner">from the</span></span>
+                <span class="line"><span class="line-inner"><em>inside</em> out.</span></span>
+            </h1>
+            <p class="hero__sub">
+                Curious by nature, deliberate by process. Work built to communicate with your audience, not just impress them.
+            </p>
+            <div class="hero__actions">
+                <a href="work.html" class="btn btn--primary">View Work <span class="arrow">→</span></a>
+                <a href="contact.html" class="btn btn--ghost">Start a Project <span class="arrow">→</span></a>
+            </div>
+        </div>
+        <div class="hero__scroll">
+            <div class="hero__scroll-line"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- Marquee Ticker -->
+    <div class="marquee-band" aria-hidden="true">
+        <div class="marquee-track">
+            <span>Brand Architecture</span><span class="sep">✦</span>
+            <span>Visual Language</span><span class="sep">✦</span>
+            <span>Brand Positioning</span><span class="sep">✦</span>
+            <span>Campaign &amp; Activation</span><span class="sep">✦</span>
+            <span>Typography</span><span class="sep">✦</span>
+            <span>Art Direction</span><span class="sep">✦</span>
+            <span>Icon Design</span><span class="sep">✦</span>
+            <span>Motion Design</span><span class="sep">✦</span>
+            <span>Brand Architecture</span><span class="sep">✦</span>
+            <span>Visual Language</span><span class="sep">✦</span>
+            <span>Brand Positioning</span><span class="sep">✦</span>
+            <span>Campaign &amp; Activation</span><span class="sep">✦</span>
+            <span>Typography</span><span class="sep">✦</span>
+            <span>Art Direction</span><span class="sep">✦</span>
+            <span>Icon Design</span><span class="sep">✦</span>
+            <span>Motion Design</span><span class="sep">✦</span>
+        </div>
+    </div>
+
+    <!-- Work Tease -->
+    <section class="section">
+        <div class="container">
+            <div class="section__header">
+                <div>
+                    <h2 class="section__title">Selected Work</h2>
+                    <p class="section__sub">A collection of projects built with intention.</p>
+                </div>
+            </div>
+
+            <div class="work-cards">
+
+                <article class="work-card" onclick="location.href='dotmatics.html'" style="cursor:none;">
+                    <div class="work-card__bg project-card__img--dotmatics"></div>
+                    <div class="work-card__overlay"></div>
+                    <div class="work-card__content">
+                        <span class="work-card__num">01</span>
+                        <div class="work-card__body">
+                            <h3 class="work-card__title">Dotmatics</h3>
+                            <div class="work-card__expand">
+                                <span class="work-card__link">View Project <span class="arrow">→</span></span>
+                                <p class="work-card__desc">Brand design and marketing assets for a global scientific software platform.</p>
+                                <div class="work-card__tags">
+                                    <span class="tag">Brand Design</span>
+                                    <span class="tag">Marketing</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="work-card" onclick="location.href='cartage.html'" style="cursor:none;">
+                    <div class="work-card__bg project-card__img--cartage"></div>
+                    <div class="work-card__overlay"></div>
+                    <div class="work-card__content">
+                        <span class="work-card__num">02</span>
+                        <div class="work-card__body">
+                            <h3 class="work-card__title">Cartage</h3>
+                            <div class="work-card__expand">
+                                <span class="work-card__link">View Project <span class="arrow">→</span></span>
+                                <p class="work-card__desc">Brand identity and visual system for a modern logistics and transportation company.</p>
+                                <div class="work-card__tags">
+                                    <span class="tag">Brand Identity</span>
+                                    <span class="tag">Visual System</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="work-card" onclick="location.href='proud-source-water.html'" style="cursor:none;">
+                    <div class="work-card__bg project-card__img--proud-source"></div>
+                    <div class="work-card__overlay"></div>
+                    <div class="work-card__content">
+                        <span class="work-card__num">03</span>
+                        <div class="work-card__body">
+                            <h3 class="work-card__title">Proud Source Water</h3>
+                            <div class="work-card__expand">
+                                <span class="work-card__link">View Project <span class="arrow">→</span></span>
+                                <p class="work-card__desc">Brand identity and marketing strategy repositioning a national spring water brand for a broader, all-American audience.</p>
+                                <div class="work-card__tags">
+                                    <span class="tag">Brand Identity</span>
+                                    <span class="tag">Marketing Strategy</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="work-card" onclick="location.href='skona.html'" style="cursor:none;">
+                    <div class="work-card__bg project-card__img--skona"></div>
+                    <div class="work-card__overlay"></div>
+                    <div class="work-card__content">
+                        <span class="work-card__num">04</span>
+                        <div class="work-card__body">
+                            <h3 class="work-card__title">Sköna</h3>
+                            <div class="work-card__expand">
+                                <span class="work-card__link">View Project <span class="arrow">→</span></span>
+                                <p class="work-card__desc">Brand identity and digital design for a creative agency built around bold, purposeful work.</p>
+                                <div class="work-card__tags">
+                                    <span class="tag">Brand Identity</span>
+                                    <span class="tag">Digital Design</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="section-cta">
+                <a href="work.html" class="btn btn--ghost">View All Work <span class="arrow">→</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Typographic List -->
+    <section class="section section--alt">
+        <div class="container">
+            <div class="section__header">
+                <div>
+                    <h2 class="section__title">Solutions</h2>
+                    <p class="section__sub">Every discipline rooted in the same process: think deeply about the audience before making a single mark.</p>
+                </div>
+            </div>
+
+            <ul class="home-svc-list">
+                <li>
+                    <a href="solutions.html" class="home-svc-row fade-in">
+                        <span class="home-svc-row__name">Brand Architecture</span>
+                        <span class="home-svc-row__tags">
+                            <span class="tag">Systems</span>
+                            <span class="tag">Guidelines</span>
+                        </span>
+                        <span class="home-svc-row__arrow">→</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="solutions.html" class="home-svc-row fade-in">
+                        <span class="home-svc-row__name">Visual Language</span>
+                        <span class="home-svc-row__tags">
+                            <span class="tag">Icons</span>
+                            <span class="tag">Typography</span>
+                        </span>
+                        <span class="home-svc-row__arrow">→</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="solutions.html" class="home-svc-row fade-in">
+                        <span class="home-svc-row__name">Brand Positioning</span>
+                        <span class="home-svc-row__tags">
+                            <span class="tag">Strategy</span>
+                            <span class="tag">Messaging</span>
+                        </span>
+                        <span class="home-svc-row__arrow">→</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="solutions.html" class="home-svc-row fade-in">
+                        <span class="home-svc-row__name">Campaign &amp; Activation</span>
+                        <span class="home-svc-row__tags">
+                            <span class="tag">Campaign</span>
+                            <span class="tag">Activation</span>
+                        </span>
+                        <span class="home-svc-row__arrow">→</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="section-cta">
+                <a href="solutions.html" class="btn btn--ghost">Explore Solutions <span class="arrow">→</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Tease -->
+    <section class="section">
+        <div class="container">
+            <div class="home-about__inner">
+                <div class="home-about__quote fade-in">
+                    <h2 class="about-headline">
+                        Great design isn't decoration.<br>It's <em>communication.</em>
+                    </h2>
+                    <p style="margin-top: 20px; color: var(--text-muted); font-weight: 300; line-height: 1.8; font-size: 0.975rem;">
+                        An independent design studio built on the belief that embracing the process, staying curious and thinking about your audience, is what makes the work authentic and effective.
+                    </p>
+                </div>
+                <div class="home-about__stats fade-in">
+                    <div class="stat">
+                        <span class="stat__num">100's</span>
+                        <span class="stat__label">Projects Delivered</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__num">50+</span>
+                        <span class="stat__label">Happy Clients</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__num">7+</span>
+                        <span class="stat__label">Years Experience</span>
+                    </div>
+                </div>
+                <div class="home-about__cta fade-in">
+                    <span class="home-about__cta-label">The Studio</span>
+                    <a href="about.html" class="btn btn--primary">Our Story <span class="arrow">→</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Band -->
+    <div class="cta-band">
+        <div class="cta-band__bg" aria-hidden="true">LET'S GO</div>
+        <div class="container">
+            <div class="cta-band__inner">
+                <h2 class="cta-band__headline">Ready to make<br>something that <em>actually works?</em></h2>
+                <a href="contact.html" class="btn btn--inverse">Start a Project <span class="arrow">→</span></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <a href="index.html" class="footer__logo">MidDesign</a>
+                    <p class="footer__tagline">Design that thinks before it speaks.</p>
+                </div>
+                <nav class="footer__nav">
+                    <div class="footer__col">
+                        <span class="footer__col-title">Navigate</span>
+                        <ul>
+                            <li><a href="work.html">Work</a></li>
+                            <li><a href="solutions.html">Solutions</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <span class="footer__col-title">Solutions</span>
+                        <ul>
+                            <li><a href="solutions.html">Brand Architecture</a></li>
+                            <li><a href="solutions.html">Visual Language</a></li>
+                            <li><a href="solutions.html">Brand Positioning</a></li>
+                            <li><a href="solutions.html">Campaign &amp; Activation</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <span class="footer__col-title">Connect</span>
+                        <ul>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Behance</a></li>
+                            <li><a href="#">LinkedIn</a></li>
+                            <li><a href="mailto:adrian.cole@middesignstudio.com">Email</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="footer__bottom">
+                <span>© 2026 MidDesign. All rights reserved.</span>
+                <span>Designed with intention.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

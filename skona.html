@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sköna | MidDesign</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Jacquard+12&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* ── Sköna: project-specific image overrides ── */
+        .proj-cover__img--skona { background: url('images/skona-cover.png') center / cover no-repeat; }
+        .proj-cover__img--skona::after { display: none; }
+
+        .proj-img--a { background: url('images/skona-2col-1.png') center / cover no-repeat; }
+        .proj-img--b { background: url('images/skona-2col-2.png') center / cover no-repeat; }
+        .proj-img--c { background: url('images/skona-3col-1.png') center / cover no-repeat; }
+        .proj-img--d { background: url('images/skona-3col-2.png') center / cover no-repeat; }
+        .proj-img--e { background: url('images/skona-3col-3.png') center / cover no-repeat; }
+        .proj-img--f { background: url('images/skona-panoramic.png') center / cover no-repeat; }
+        .proj-img--g { background: url('images/skona-asym-wide.png') center / cover no-repeat; }
+        .proj-img--h { background: url('images/skona-asym-tall.png') center / cover no-repeat; }
+    </style>
+</head>
+<body data-page="work">
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <a href="index.html" class="nav__logo">MidDesign</a>
+        <ul class="nav__links">
+            <li><a href="work.html">Work</a></li>
+            <li><a href="solutions.html">Solutions</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" class="nav__cta">Start a Project</a></li>
+        </ul>
+        <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="work.html" class="mobile-link">Work</a></li>
+            <li><a href="solutions.html" class="mobile-link">Solutions</a></li>
+            <li><a href="about.html" class="mobile-link">About</a></li>
+            <li><a href="contact.html" class="mobile-link">Start a Project</a></li>
+        </ul>
+    </div>
+
+    <!-- Project Hero -->
+    <section class="proj-hero">
+        <div class="proj-hero__bg-text" aria-hidden="true">SKÖNA</div>
+        <div class="container">
+            <div class="proj-hero__label">
+                <span class="page-hero__label-rule"></span>
+                Presentation Design, 2019–Present
+            </div>
+            <h1 class="proj-hero__title">Sköna</h1>
+        </div>
+    </section>
+
+    <!-- Metadata Strip -->
+    <div class="proj-meta">
+        <div class="container">
+            <div class="proj-meta__grid">
+                <div class="proj-meta__item">
+                    <span class="proj-meta__label">Client</span>
+                    <span class="proj-meta__value">Sköna</span>
+                </div>
+                <div class="proj-meta__item">
+                    <span class="proj-meta__label">Year</span>
+                    <span class="proj-meta__value">2019–Present</span>
+                </div>
+                <div class="proj-meta__item">
+                    <span class="proj-meta__label">Services</span>
+                    <span class="proj-meta__value">Presentation Design, Visual Systems</span>
+                </div>
+                <div class="proj-meta__item">
+                    <span class="proj-meta__label">Role</span>
+                    <span class="proj-meta__value">Brand Designer</span>
+                </div>
+                <div class="proj-meta__item proj-meta__item--cta">
+                    <a href="contact.html" class="btn btn--primary">Start a Project <span class="arrow">→</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cover Image -->
+    <div class="proj-cover">
+        <div class="proj-cover__img proj-cover__img--skona"></div>
+    </div>
+
+    <!-- Overview: About Brand + My Deliverable -->
+    <section class="section section--alt">
+        <div class="container">
+            <div class="proj-overview fade-in">
+                <div class="proj-overview__text">
+                    <div class="proj-callout__label">About the Brand</div>
+                    <p class="proj-callout__text">Sköna is a full-service B2B creative marketing agency that specializes in branding, design, and advertising for technology companies.</p>
+                </div>
+                <div class="proj-overview__details">
+                    <div class="proj-detail">
+                        <span class="proj-detail__label">My Deliverable</span>
+                        <ul class="proj-detail__list">
+                            <li>Master Presentation Templates</li>
+                            <li>PowerPoint &amp; Google Slides Systems</li>
+                            <li>Brand Guidelines Integration</li>
+                            <li>User Documentation &amp; Best Practices</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Grid 01 — 2 col -->
+    <div class="proj-images">
+        <div class="proj-img-grid proj-img-grid--2col">
+            <div class="proj-img proj-img--a fade-in"></div>
+            <div class="proj-img proj-img--b fade-in"></div>
+        </div>
+    </div>
+
+    <!-- Section 01: The Challenge -->
+    <section class="section">
+        <div class="container">
+            <div class="proj-block fade-in">
+                <div class="proj-block__header">
+                    <span class="proj-block__num" aria-hidden="true">01</span>
+                    <h2 class="proj-block__title">The Challenge</h2>
+                </div>
+                <div class="proj-block__body">
+                    <p class="proj-block__hook">Part of Sköna's process for every client is building a custom presentation template that has to do two things at once — tell a brand's story with enough sophistication to earn attention, and be simple enough for anyone in the company to actually use.</p>
+                    <p>The design needs to be unique and intricate enough to engage whoever's on the other side of the screen and tell the specific story of that business. But the template also has to be foolproof enough for someone who didn't design it — and never will — to pick it up, fill it in, and send it out without breaking anything.</p>
+                    <p>That's a harder problem than it sounds. The more visually considered a template is, the more ways there are for someone to deviate from it. A wrong font, an off-brand color, a misaligned layout — and suddenly the presentation that was supposed to build credibility is quietly undermining it instead. The brief is always the same: make it impressive, make it intuitive, and make sure those two things don't fight each other.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Grid 02 — 3 col -->
+    <div class="proj-images">
+        <div class="proj-img-grid proj-img-grid--3col">
+            <div class="proj-img proj-img--c fade-in"></div>
+            <div class="proj-img proj-img--d fade-in"></div>
+            <div class="proj-img proj-img--e fade-in"></div>
+        </div>
+    </div>
+
+    <!-- Section 02: The Approach -->
+    <section class="section section--alt">
+        <div class="container">
+            <div class="proj-block fade-in">
+                <div class="proj-block__header">
+                    <span class="proj-block__num" aria-hidden="true">02</span>
+                    <h2 class="proj-block__title">The Approach</h2>
+                </div>
+                <div class="proj-block__body">
+                    <p class="proj-block__hook">The goal is a template that does the thinking so the user doesn't have to.</p>
+                    <p>Every template I build is a master file — custom formatted with branded color palettes, fonts, layouts, and graphic elements baked directly into the document. When someone opens it to start a new presentation, they shouldn't have to make a single design decision. The right font is already there. The spacing is already correct. The color is already on brand. It should be 100% foolproof, so the only thing the user has to focus on is what they're actually trying to say.</p>
+                    <p>But a good template also accounts for the moments when things don't go as planned. I always include a guide alongside the file — best practices for working in PowerPoint or Slides, and troubleshooting information for the issues that inevitably come up. Not because I expect the work to fail, but because a template that comes with context is one that actually gets used correctly.</p>
+                    <p>The most important design decisions in a presentation template aren't always the ones that are visible — they're the constraints. Locked master slides, protected style guides, designated placeholder areas. The structure the user never sees is what makes the design they do see stay consistent.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Width Image -->
+    <div class="proj-images">
+        <div class="proj-img proj-img--full proj-img--f fade-in"></div>
+    </div>
+
+    <!-- Section 03: The Outcome + Results -->
+    <section class="section">
+        <div class="container">
+            <div class="proj-block fade-in">
+                <div class="proj-block__header">
+                    <span class="proj-block__num" aria-hidden="true">03</span>
+                    <h2 class="proj-block__title">The Outcome</h2>
+                </div>
+                <div class="proj-block__body">
+                    <p class="proj-block__hook">A custom branded presentation is doing work for a business every time someone opens it.</p>
+                    <p>What Sköna's clients end up with is a template that makes every presentation feel considered — even the ones that weren't. Whether it's an annual report going to investors, an onboarding deck for a new client, or an internal all-hands that someone put together the night before, the brand shows up the same way every time. That consistency builds trust. It signals to whoever's on the receiving end that this is a company that has its act together, before a single word gets read.</p>
+                    <p>For Sköna, this is the last mile of their branding work — the point where a visual identity stops being a document and starts being something people actually use every day. A logo and a color palette only go as far as the things built from them.</p>
+                </div>
+            </div>
+            <div class="proj-results fade-in">
+                <div class="proj-result">
+                    <span class="proj-result__num">5+</span>
+                    <span class="proj-result__label">Years as Sköna's presentation specialist</span>
+                </div>
+                <div class="proj-result">
+                    <span class="proj-result__num">—</span>
+                    <span class="proj-result__label">—</span>
+                </div>
+                <div class="proj-result">
+                    <span class="proj-result__num">—</span>
+                    <span class="proj-result__label">—</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Grid 03 — 2 col asymmetric -->
+    <div class="proj-images">
+        <div class="proj-img-grid proj-img-grid--asym">
+            <div class="proj-img proj-img--g fade-in"></div>
+            <div class="proj-img proj-img--h fade-in"></div>
+        </div>
+    </div>
+
+    <!-- Next Project -->
+    <section class="proj-next">
+        <div class="container">
+            <div class="proj-next__label">
+                <span class="page-hero__label-rule"></span>
+                Next Project
+            </div>
+            <a href="dotmatics.html" class="proj-next__card fade-in">
+                <div class="proj-next__img proj-next__img--dotmatics"></div>
+                <div class="proj-next__info">
+                    <div class="proj-next__tags">
+                        <span class="tag">Brand Design</span>
+                        <span class="tag">Marketing</span>
+                    </div>
+                    <h2 class="proj-next__title">Dotmatics</h2>
+                    <span class="proj-next__cta">View Project <span class="arrow">→</span></span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- CTA Band -->
+    <div class="cta-band">
+        <div class="cta-band__bg" aria-hidden="true">LET'S GO</div>
+        <div class="container">
+            <div class="cta-band__inner">
+                <h2 class="cta-band__headline">Like what<br>you <em>see?</em></h2>
+                <a href="contact.html" class="btn btn--inverse">Start a Project <span class="arrow">→</span></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <a href="index.html" class="footer__logo">MidDesign</a>
+                    <p class="footer__tagline">Graphic design that gets noticed.</p>
+                </div>
+                <nav class="footer__nav">
+                    <div class="footer__col">
+                        <span class="footer__col-title">Navigate</span>
+                        <ul>
+                            <li><a href="work.html">Work</a></li>
+                            <li><a href="solutions.html">Solutions</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <span class="footer__col-title">Solutions</span>
+                        <ul>
+                            <li><a href="solutions.html">Brand Architecture</a></li>
+                            <li><a href="solutions.html">Visual Language</a></li>
+                            <li><a href="solutions.html">Brand Positioning</a></li>
+                            <li><a href="solutions.html">Campaign &amp; Activation</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <span class="footer__col-title">Connect</span>
+                        <ul>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Behance</a></li>
+                            <li><a href="#">LinkedIn</a></li>
+                            <li><a href="mailto:adrian.cole@middesignstudio.com">Email</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="footer__bottom">
+                <span>© 2026 MidDesign. All rights reserved.</span>
+                <span>Designed with intention.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
