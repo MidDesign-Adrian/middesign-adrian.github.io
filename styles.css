@@ -2738,19 +2738,54 @@ a.contact-detail__value:hover { color: var(--accent); }
         height: auto;
         gap: 3px;
     }
+
+    /* Switch to stacked layout: image on top, text below */
     .work-card {
-        height: 300px;
         flex: none;
+        height: auto;
+        overflow: visible;
+        display: flex;
+        flex-direction: column;
     }
-    .work-cards:has(.work-card:hover) .work-card:not(:hover) { flex: none; }
-    .work-card:hover { flex: none; }
+
+    /* Image becomes a normal flow block with fixed height */
+    .work-card__bg {
+        position: relative;
+        inset: auto;
+        height: 220px;
+        flex-shrink: 0;
+    }
+
+    /* Hide the dark overlay — no longer needed */
+    .work-card__overlay { display: none; }
+
+    /* Content comes out of absolute positioning */
+    .work-card__content {
+        position: relative;
+        inset: auto;
+        background: var(--bg-card);
+        padding: 20px 24px 24px;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+
+    /* Always show the expand block */
     .work-card__expand {
         max-height: none;
         opacity: 1;
-        margin-bottom: 14px;
+        margin-bottom: 0;
         transition: none;
+        flex-direction: column;
+        gap: 8px;
     }
-    .work-card__title { white-space: normal; }
+
+    .work-card__num { font-size: 1.6rem; margin-bottom: 4px; }
+    .work-card__title { white-space: normal; font-size: 1.3rem; }
+    .work-card__desc { max-width: 100%; }
+
+    .work-cards:has(.work-card:hover) .work-card:not(:hover) { flex: none; }
+    .work-card:hover { flex: none; }
+    .work-card:hover .work-card__bg { transform: none; }
 }
 
 /* =========================================
