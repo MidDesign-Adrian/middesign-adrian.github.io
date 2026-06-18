@@ -94,7 +94,6 @@
 
 html {
     scroll-behavior: smooth;
-    cursor: none;
 }
 
 body {
@@ -104,7 +103,6 @@ body {
     font-size: 16px;
     line-height: 1.6;
     overflow-x: hidden;
-    cursor: none;
 }
 
 /* Grain overlay */
@@ -123,66 +121,35 @@ body::before {
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
 
-/* --- Custom Cursor --- */
-.cursor-dot,
+/* --- Hover Ring Cursor --- */
 .cursor-ring {
     position: fixed;
     pointer-events: none;
     z-index: 99999;
+    width: 40px;
+    height: 40px;
+    border: 1.5px solid var(--accent);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1),
+                opacity 0.18s ease;
     opacity: 0;
-    transform: translate(-50%, -50%);
-    transition: opacity 0.3s ease;
-    will-change: left, top;
-}
-
-.cursor-dot {
-    width: 5px;
-    height: 5px;
-    background: var(--text);
-    border-radius: 50%;
-    z-index: 100000;
-    transition: opacity 0.3s ease, width 0.2s ease, height 0.2s ease, background 0.2s ease;
-}
-
-.cursor-ring {
-    width: 36px;
-    height: 36px;
-    border: 1px solid rgba(240, 240, 240, 0.45);
-    border-radius: 50%;
-    transition: opacity 0.3s ease, width 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-                height 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-                border-color 0.25s ease;
-}
-
-.cursor-dot.is-visible,
-.cursor-ring.is-visible { opacity: 1; }
-
-.cursor-dot.on-hover {
-    width: 8px;
-    height: 8px;
-    background: var(--accent);
+    will-change: left, top, transform;
 }
 
 .cursor-ring.on-hover {
-    width: 56px;
-    height: 56px;
-    border-color: rgba(255, 77, 0, 0.5);
-}
-
-.cursor-dot.on-click {
-    width: 3px;
-    height: 3px;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
 }
 
 .cursor-ring.on-click {
-    width: 28px;
-    height: 28px;
+    transform: translate(-50%, -50%) scale(0.75);
+    transition: transform 0.1s ease, opacity 0.1s ease;
 }
 
-/* Hide cursor on touch devices */
+/* Touch devices: no ring */
 @media (hover: none) {
-    .cursor-dot, .cursor-ring { display: none; }
-    html, body { cursor: auto; }
+    .cursor-ring { display: none; }
 }
 
 /* --- Typography --- */
@@ -199,7 +166,7 @@ em {
 }
 
 a, button {
-    cursor: none;
+
     color: inherit;
     text-decoration: none;
 }
@@ -300,7 +267,7 @@ a, button {
     gap: 5px;
     background: none;
     border: none;
-    cursor: none;
+
     padding: 4px;
 }
 .nav__hamburger span {
@@ -621,7 +588,7 @@ a, button {
     font-weight: 500;
     padding: 13px 26px;
     border-radius: 100px;
-    cursor: none;
+
     border: none;
     letter-spacing: 0.01em;
     text-decoration: none;
@@ -705,7 +672,7 @@ a, button {
     gap: 14px;
 }
 
-.project-card            { grid-column: span 4; cursor: none; }
+.project-card            { grid-column: span 4; cursor: pointer; }
 .project-card--large     { grid-column: span 8; }
 .project-card--wide      { grid-column: span 8; }
 
@@ -850,7 +817,7 @@ a, button {
     grid-template-columns: 58% 42%;
     align-items: stretch;
     border-bottom: 1px solid var(--border);
-    cursor: none;
+
     overflow: hidden;
     transition: border-bottom-color 0.3s ease;
 }
@@ -1023,7 +990,7 @@ a, button {
     aspect-ratio: 1;
     overflow: hidden;
     position: relative;
-    cursor: none;
+
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -1331,7 +1298,7 @@ a.contact-detail__value:hover { color: var(--accent); }
     transition: border-color 0.2s;
     width: 100%;
     appearance: none;
-    cursor: none;
+
 }
 
 .select-arrow {
@@ -1822,7 +1789,7 @@ a.contact-detail__value:hover { color: var(--accent); }
     border-radius: 100px;
     background: transparent;
     color: var(--text-muted);
-    cursor: none;
+
     transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 
@@ -2590,7 +2557,7 @@ a.contact-detail__value:hover { color: var(--accent); }
     flex: 1;
     position: relative;
     overflow: hidden;
-    cursor: none;
+
     transition: flex 0.9s cubic-bezier(0.4, 0, 0.2, 1);
     min-width: 0;
 }

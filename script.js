@@ -1,67 +1,30 @@
 // MidDesign — Portfolio Website Scripts
 
 // =========================================
-// CUSTOM CURSOR
+// HOVER RING CURSOR
 // =========================================
-const cursorDot  = document.getElementById('cursorDot');
 const cursorRing = document.getElementById('cursorRing');
 
-if (window.matchMedia('(hover: hover)').matches) {
-    let mouseX = 0, mouseY = 0;
-    let ringX  = 0, ringY  = 0;
+if (cursorRing && window.matchMedia('(hover: hover)').matches) {
 
+    // Snap ring exactly to cursor — no lag
     document.addEventListener('mousemove', e => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-        cursorDot.style.left = mouseX + 'px';
-        cursorDot.style.top  = mouseY + 'px';
-        if (!cursorDot.classList.contains('is-visible')) {
-            cursorDot.classList.add('is-visible');
-            cursorRing.classList.add('is-visible');
-        }
+        cursorRing.style.left = e.clientX + 'px';
+        cursorRing.style.top  = e.clientY + 'px';
     }, { passive: true });
 
-    function animateRing() {
-        const ease = 0.14;
-        ringX += (mouseX - ringX) * ease;
-        ringY += (mouseY - ringY) * ease;
-        cursorRing.style.left = ringX + 'px';
-        cursorRing.style.top  = ringY + 'px';
-        requestAnimationFrame(animateRing);
-    }
-    animateRing();
-
+    // Show ring on interactive elements
     const interactiveEls = document.querySelectorAll(
-        'a, button, .project-card, .service-item, .home-svc-row, select, textarea, input, .filter-btn'
+        'a, button, .work-card, .work-showcase__item, .service-item, .home-svc-row, select, textarea, input'
     );
+
     interactiveEls.forEach(el => {
-        el.addEventListener('mouseenter', () => {
-            cursorDot.classList.add('on-hover');
-            cursorRing.classList.add('on-hover');
-        });
-        el.addEventListener('mouseleave', () => {
-            cursorDot.classList.remove('on-hover');
-            cursorRing.classList.remove('on-hover');
-        });
+        el.addEventListener('mouseenter', () => cursorRing.classList.add('on-hover'));
+        el.addEventListener('mouseleave', () => cursorRing.classList.remove('on-hover'));
     });
 
-    document.addEventListener('mousedown', () => {
-        cursorDot.classList.add('on-click');
-        cursorRing.classList.add('on-click');
-    });
-    document.addEventListener('mouseup', () => {
-        cursorDot.classList.remove('on-click');
-        cursorRing.classList.remove('on-click');
-    });
-
-    document.addEventListener('mouseleave', () => {
-        cursorDot.classList.remove('is-visible');
-        cursorRing.classList.remove('is-visible');
-    });
-    document.addEventListener('mouseenter', () => {
-        cursorDot.classList.add('is-visible');
-        cursorRing.classList.add('is-visible');
-    });
+    document.addEventListener('mousedown', () => cursorRing.classList.add('on-click'));
+    document.addEventListener('mouseup',   () => cursorRing.classList.remove('on-click'));
 }
 
 // =========================================
