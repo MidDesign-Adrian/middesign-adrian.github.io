@@ -1,31 +1,5 @@
 // MidDesign — Portfolio Website Scripts
 
-// =========================================
-// HOVER RING CURSOR
-// =========================================
-const cursorRing = document.getElementById('cursorRing');
-
-if (cursorRing && window.matchMedia('(hover: hover)').matches) {
-
-    // Snap ring exactly to cursor — no lag
-    document.addEventListener('mousemove', e => {
-        cursorRing.style.left = e.clientX + 'px';
-        cursorRing.style.top  = e.clientY + 'px';
-    }, { passive: true });
-
-    // Show ring on interactive elements
-    const interactiveEls = document.querySelectorAll(
-        'a, button, .work-card, .work-showcase__item, .service-item, .home-svc-row, select, textarea, input'
-    );
-
-    interactiveEls.forEach(el => {
-        el.addEventListener('mouseenter', () => cursorRing.classList.add('on-hover'));
-        el.addEventListener('mouseleave', () => cursorRing.classList.remove('on-hover'));
-    });
-
-    document.addEventListener('mousedown', () => cursorRing.classList.add('on-click'));
-    document.addEventListener('mouseup',   () => cursorRing.classList.remove('on-click'));
-}
 
 // =========================================
 // ACTIVE NAV LINK — page-based
