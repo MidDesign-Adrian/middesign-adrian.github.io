@@ -166,23 +166,39 @@ const form        = document.getElementById('contactForm');
 const formSuccess = document.getElementById('formSuccess');
 
 if (form) {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
         e.preventDefault();
         const btn      = form.querySelector('button[type="submit"]');
         const origText = btn.innerHTML;
         btn.disabled  = true;
         btn.innerHTML = 'Sending&hellip;';
 
-        setTimeout(() => {
-            form.reset();
-            btn.style.display         = 'none';
-            formSuccess.style.display = 'block';
-            setTimeout(() => {
-                formSuccess.style.display = 'none';
-                btn.style.display         = '';
-                btn.disabled              = false;
-                btn.innerHTML             = origText;
-            }, 6000);
-        }, 1200);
+        try {
+            const response = await fetch(form.action, {
+                method:  'POST',
+                body:    new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+                form.reset();
+                btn.style.display         = 'none';
+                formSuccess.style.display = 'block';
+                setTimeout(() => {
+                    formSuccess.style.display = 'none';
+                    btn.style.display         = '';
+                    btn.disabled              = false;
+                    btn.innerHTML             = origText;
+                }, 6000);
+            } else {
+                btn.disabled  = false;
+                btn.innerHTML = origText;
+                alert('Something went wrong. Please try again or email adrian.cole@middesignstudio.com directly.');
+            }
+        } catch {
+            btn.disabled  = false;
+            btn.innerHTML = origText;
+            alert('Something went wrong. Please try again or email adrian.cole@middesignstudio.com directly.');
+        }
     });
 }
