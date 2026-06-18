@@ -363,7 +363,7 @@ a, button {
 .hero__img {
     position: absolute;
     inset: 0;
-    background-image: url('images/Scream_Head.png');
+    background-image: url('images/Scream_Head.webp');
     background-size: cover;
     background-position: center 18%;
     z-index: 0;
@@ -730,10 +730,10 @@ a, button {
 .project-card__img--5 { background: linear-gradient(135deg, #1a0505 0%, #3d0f0f 50%, #6b1a1a 100%); }
 .project-card__img--6 { background: linear-gradient(135deg, #0d1a0d 0%, #1a3d1a 50%, #2d5c2d 100%); }
 
-.project-card__img--proud-source { background: url('images/ps-cover.png') center / cover no-repeat; }
-.project-card__img--dotmatics    { background: url('images/dot-cover.png') center / cover no-repeat; }
-.project-card__img--skona        { background: url('images/skona-cover.png') center / cover no-repeat; }
-.project-card__img--cartage      { background: url('images/cartage-cover.png') center / cover no-repeat; }
+.project-card__img--proud-source { background: url('images/ps-cover.webp') center / cover no-repeat; }
+.project-card__img--dotmatics    { background: url('images/dot-cover.webp') center / cover no-repeat; }
+.project-card__img--skona        { background: url('images/skona-cover.webp') center / cover no-repeat; }
+.project-card__img--cartage      { background: url('images/cartage-cover.webp') center / cover no-repeat; }
 
 /* Subtle crosshatch on placeholders */
 .project-card__img::before {
@@ -2504,10 +2504,10 @@ a.contact-detail__value:hover { color: var(--accent); }
 }
 
 .proj-next__img--1          { background: linear-gradient(135deg, #1a1a1a 0%, #111 100%); }
-.proj-next__img--proud-source { background: url('images/ps-cover.png') center / cover no-repeat; }
-.proj-next__img--dotmatics  { background: url('images/dot-cover.png') center / cover no-repeat; }
-.proj-next__img--skona      { background: url('images/skona-cover.png') center / cover no-repeat; }
-.proj-next__img--cartage    { background: url('images/cartage-cover.png') center / cover no-repeat; }
+.proj-next__img--proud-source { background: url('images/ps-cover.webp') center / cover no-repeat; }
+.proj-next__img--dotmatics  { background: url('images/dot-cover.webp') center / cover no-repeat; }
+.proj-next__img--skona      { background: url('images/skona-cover.webp') center / cover no-repeat; }
+.proj-next__img--cartage    { background: url('images/cartage-cover.webp') center / cover no-repeat; }
 
 .proj-next__info {
     padding: 48px 48px 48px 0;
