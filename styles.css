@@ -1381,6 +1381,11 @@ a.contact-detail__value:hover { color: var(--accent); }
     font-size: 0.78rem;
     color: var(--text-muted);
 }
+.footer__bottom a {
+    color: var(--text-muted);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
 
 /* =========================================
    SCROLL ANIMATIONS
