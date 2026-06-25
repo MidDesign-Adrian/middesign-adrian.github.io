@@ -1490,7 +1490,7 @@ a.contact-detail__value:hover { color: var(--accent); }
     .footer__nav { grid-template-columns: 1fr; }
     .service-item { padding: 36px 28px; }
     .client-cell { padding: 28px 20px; min-height: 80px; }
-    .client-cell__name { font-size: 1rem; }
+    .client-logo { max-width: 110px; max-height: 28px; }
     .proj-result { padding: 32px 24px; }
     .proj-result__num { font-size: clamp(2rem, 8vw, 4rem); }
     .cta-band__headline { font-size: clamp(2.2rem, 8vw, 4rem); }
@@ -1980,16 +1980,19 @@ a.contact-detail__value:hover { color: var(--accent); }
 
 .client-cell:hover { background: var(--bg-card); }
 
-.client-cell__name {
-    font-family: var(--font-display);
-    font-size: 1.35rem;
-    font-weight: 100;
-    letter-spacing: -0.02em;
-    color: var(--text-muted);
-    transition: color 0.25s;
+.client-logo {
+    max-width: 140px;
+    max-height: 36px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(1) opacity(0.35);
+    transition: filter 0.3s ease;
 }
 
-.client-cell:hover .client-cell__name { color: var(--text); }
+.client-cell:hover .client-logo {
+    filter: none;
+}
 
 /* =========================================
    RESPONSIVE: NEW COMPONENTS
