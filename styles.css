@@ -417,7 +417,7 @@ a, button {
     font-size: 1.1rem;
     color: var(--text-muted);
     margin-bottom: 48px;
-    max-width: 440px;
+    max-width: 520px;
     font-weight: 300;
     line-height: 1.75;
     animation: fadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both;
@@ -1486,6 +1486,13 @@ a.contact-detail__value:hover { color: var(--accent); }
 }
 
 @media (max-width: 480px) {
+    .hero__bg-text {
+        font-size: 11rem;
+        bottom: -0.2em;
+        -webkit-text-stroke-color: rgba(255, 77, 0, 0.18);
+    }
+    .hero__label { letter-spacing: 0.12em; gap: 12px; }
+    .hero__sub { font-size: 1rem; line-height: 1.65; margin-bottom: 36px; }
     .hero__actions { flex-direction: column; align-items: flex-start; }
     .footer__nav { grid-template-columns: 1fr; }
     .service-item { padding: 36px 28px; }
