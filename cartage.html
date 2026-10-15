@@ -1,332 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1HKWVMP6Y9"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-1HKWVMP6Y9');
-    </script>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cartage | MidDesign</title>
-    <link rel="icon" type="image/webp" href="images/Favicon.webp">
-    <link rel="apple-touch-icon" href="images/Favicon.webp">
-    <meta name="description" content="UI icon design and visual language for Cartage: an AI-native logistics platform. A system of icons that makes a cutting-edge operating system legible to everyday users.">
-    <meta property="og:title" content="Cartage | MidDesign">
-    <meta property="og:description" content="UI icon design and visual language for Cartage: an AI-native logistics platform. A system of icons that makes a cutting-edge operating system legible to everyday users.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cartage icon system | Adrian Cole</title>
+    <meta name="description" content="A 3D icon system for an AI-native logistics platform, built to make the product explain itself.">
+    <link rel="canonical" href="https://middesignstudio.com/cartage.html">
+    <meta property="og:title" content="Cartage icon system | Adrian Cole">
+    <meta property="og:description" content="A 3D icon system for an AI-native logistics platform, built to make the product explain itself.">
+    <meta property="og:type" content="article">
     <meta property="og:url" content="https://middesignstudio.com/cartage.html">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://middesignstudio.com/images/cartage-og.jpg">
+    <meta property="og:image" content="https://middesignstudio.com/images/Cartage/cartage-og.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Cartage UI icon system by MidDesign.">
+    <meta property="og:image:alt" content="A glossy red Cartage truck icon on a wooden table">
+    <meta property="og:site_name" content="Adrian Cole">
+    <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Cartage | MidDesign">
-    <meta name="twitter:description" content="UI icon design and visual language for Cartage: an AI-native logistics platform. A system of icons that makes a cutting-edge operating system legible to everyday users.">
-    <meta name="twitter:image" content="https://middesignstudio.com/images/cartage-og.jpg">
-    <link rel="canonical" href="https://middesignstudio.com/cartage.html">
+    <meta name="theme-color" content="#F5F3EF">
+    <link rel="icon" href="images/Favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Jacquard+12&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* ── Cartage: project-specific image overrides ── */
-        .proj-cover__img--cartage { background: url('images/cartage-cover.webp') center / cover no-repeat; }
-        .proj-cover__img--cartage::after { display: none; }
-
-        .proj-img--a { background: url('images/cartage-2col-1.webp') center / cover no-repeat; }
-        .proj-img--b { background: url('images/cartage-2col-2.webp') center / cover no-repeat; }
-        .proj-img--c { background: url('images/cartage-3col-1.webp') center / cover no-repeat; }
-        .proj-img--d { background: url('images/cartage-3col-2.webp') center / cover no-repeat; }
-        .proj-img--e { background: url('images/cartage-3col-3.webp') center / cover no-repeat; }
-        .proj-img--f { background: url('images/cartage-panoramic.webp') center / cover no-repeat; }
-        .proj-img--h { background: url('images/cartage-asym.webp') center / cover no-repeat; }
-
-        /* Video slot - matches proj-img sizing behaviour */
-        .proj-img--video {
-            position: relative;
-            aspect-ratio: 4 / 3;
-            overflow: hidden;
-            background: #161616;
-        }
-
-        .proj-img--video video {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: left center;
-        }
-    </style>
 </head>
-<body data-page="work">
+<body>
+    <a class="skip" href="#main">Skip to content</a>
 
-    <!-- Custom Cursor -->
-
-    <!-- Navigation -->
-    <nav class="nav" id="nav">
-        <a href="index.html" class="nav__logo">MidDesign</a>
-        <ul class="nav__links">
-            <li><a href="work.html">Work</a></li>
-            <li><a href="solutions.html">Solutions</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html" class="nav__cta">Start a Project</a></li>
-        </ul>
-        <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </nav>
-
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <ul>
-            <li><a href="work.html" class="mobile-link">Work</a></li>
-            <li><a href="solutions.html" class="mobile-link">Solutions</a></li>
-            <li><a href="about.html" class="mobile-link">About</a></li>
-            <li><a href="contact.html" class="mobile-link">Start a Project</a></li>
-        </ul>
-    </div>
-
-    <!-- Project Hero -->
-    <section class="proj-hero">
-        <div class="proj-hero__bg-text" aria-hidden="true">CART</div>
-        <div class="container">
-            <div class="proj-hero__label">
-                <span class="page-hero__label-rule"></span>
-                UI Icon Design, 2025–2026
-            </div>
-            <h1 class="proj-hero__title">Cartage</h1>
+    <header class="header">
+        <div class="wrap header__inner">
+            <a class="header__name" href="index.html" aria-label="Adrian Cole, home"><img src="images/Favicon.svg" alt="" width="48" height="48"></a>
+            <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+                <span class="menu-btn__bars" aria-hidden="true"></span>
+            </button>
+            <nav class="nav" id="nav" aria-label="Main">
+                <a href="index.html">Work</a>
+                <a href="play.html">Play</a>
+                <a href="about.html">About</a>
+                <a href="mailto:adrian.cole@middesignstudio.com">Email</a>
+            </nav>
         </div>
-    </section>
+    </header>
 
-    <!-- Metadata Strip -->
-    <div class="proj-meta">
-        <div class="container">
-            <div class="proj-meta__grid">
-                <div class="proj-meta__item">
-                    <span class="proj-meta__label">Client</span>
-                    <span class="proj-meta__value">Cartage</span>
-                </div>
-                <div class="proj-meta__item">
-                    <span class="proj-meta__label">Year</span>
-                    <span class="proj-meta__value">2025–2026</span>
-                </div>
-                <div class="proj-meta__item">
-                    <span class="proj-meta__label">Services</span>
-                    <span class="proj-meta__value">UI Icon Design, Visual System</span>
-                </div>
-                <div class="proj-meta__item">
-                    <span class="proj-meta__label">Role</span>
-                    <span class="proj-meta__value">Brand Designer</span>
-                </div>
-                <div class="proj-meta__item proj-meta__item--cta">
-                    <a href="contact.html" class="btn btn--primary">Start a Project <span class="arrow">→</span></a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <main id="main">
+        <article>
+            <header class="cs-head wrap">
+                <a class="cs-head__back label" href="index.html">← All work</a>
+                <h1 class="cs-title">Cartage</h1>
+                <p class="cs-result">A 3D icon system for an AI-native logistics platform, built to make the product explain itself.</p>
+                <dl class="facts">
+                    <div><dt class="label">Client</dt><dd>Cartage, an AI-native logistics platform that works as an autonomous operating system for freight coordination</dd></div>
+                    <div><dt class="label">Role</dt><dd>Brand Designer</dd></div>
+                    <div><dt class="label">Years</dt><dd>2025 to 2026</dd></div>
+                    <div><dt class="label">Scope</dt><dd>A system of icons used throughout the platform UI, visual system</dd></div>
+                </dl>
+            </header>
+            <figure class="cs-cover wrap">
+                <img src="images/Cartage/Cover-Full_Bleed-2400x1200.webp" alt="A glossy red Cartage truck icon on a wooden table" width="2400" height="1200">
+            </figure>
 
-    <!-- Cover Image -->
-    <div class="proj-cover">
-        <div class="proj-cover__img proj-cover__img--cartage" role="img" aria-label="Cartage AI platform icon system"></div>
-    </div>
-
-    <!-- Overview: About Brand + My Deliverable -->
-    <section class="section section--alt">
-        <div class="container">
-            <div class="proj-overview fade-in">
-                <div class="proj-overview__text">
-                    <div class="proj-callout__label">About the Brand</div>
-                    <p class="proj-callout__text">Cartage is an AI-native logistics platform that functions as an autonomous operating system for freight coordination.</p>
-                </div>
-                <div class="proj-overview__details">
-                    <div class="proj-detail">
-                        <span class="proj-detail__label">My Deliverable</span>
-                        <ul class="proj-detail__list">
-                            <li>Build a system of icons to be utilized throughout their platform's UI</li>
-                        </ul>
+            <div class="wrap">
+                <section class="block" aria-labelledby="problem">
+                    <h2 class="block__label label" id="problem">The problem</h2>
+                    <div class="block__body">
+                        <p class="block__lead">The goal was to design a system of icons that makes Cartage's operating system more intuitive while elevating the brand's visual identity to match their product's quality.</p>
+                        <p>Tech is a notoriously opaque industry. For all the talk about algorithms, data, and AI, it can still be a challenge for customers to understand how it all fits together to meet their business needs. This is great for creating mystique and allure, but at the same time, I think it makes it difficult for tech brands to connect their products with users. They still need to be intuitive enough for people to log in to an application and understand what they're looking at and how to interact with it, on day one.</p>
+                        <p>Being an AI native platform, Cartage is at the bleeding edge of modern technology. Part of their struggle is in making the connection between their clients' workflow and the capabilities of their AI. Cartage brought me on to build out a visual language for their operating system. Creating icons to break down the barrier between their advanced system and the average shipping and logistics client. All while leveling up the look of the brand to match the quality of their product.</p>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                </section>
 
-    <!-- Image Grid 01 - 2 col -->
-    <div class="proj-images">
-        <div class="proj-img-grid proj-img-grid--2col">
-            <div class="proj-img proj-img--a fade-in" role="img" aria-label="Project image 1"></div>
-            <div class="proj-img proj-img--b fade-in" role="img" aria-label="Project image 2"></div>
-        </div>
-    </div>
+                <div class="figs figs--2">
+                    <figure><img src="images/Cartage/2_Column_Grid-1200x900-1.webp" alt="Cartage app icon, a glossy purple cube with Wilson's face, in the design file" width="1200" height="900" loading="lazy"></figure>
+                    <figure><img src="images/Cartage/2_Column_Grid-1200x900-2.webp" alt="Glossy chat bubble icons floating above a phone running the Cartage app" width="1200" height="900" loading="lazy"></figure>
+                </div>
 
-    <!-- Section 01: The Challenge -->
-    <section class="section">
-        <div class="container">
-            <div class="proj-block fade-in">
-                <div class="proj-block__header">
-                    <h2 class="proj-block__title">The Challenge</h2>
-                </div>
-                <div class="proj-block__body">
-                    <p class="proj-block__hook">The goal was to design a system of icons that makes Cartage's operating system more intuitive while elevating the brand's visual identity to match their product's quality.</p>
-                    <p>Tech is a notoriously opaque industry. For all the talk about algorithms, data, and AI, it can still be a challenge for customers to understand how it all fits together to meet their business needs. This is great for creating mystique and allure, but at the same time, I think it makes it difficult for tech brands to connect their products with users. They still need to be intuitive enough for people to log in to an application and understand what they're looking at and how to interact with it, on day one.</p>
-                    <p>Being an AI native platform, Cartage is at the bleeding edge of modern technology. Part of their struggle is in making the connection between their clients' workflow and the capabilities of their AI. Cartage brought me on to build out a visual language for their operating system. Creating icons to break down the barrier between their advanced system and the average shipping and logistics client. All while leveling up the look of the brand to match the quality of their product.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Image Grid 02 - 3 col -->
-    <div class="proj-images">
-        <div class="proj-img-grid proj-img-grid--3col">
-            <div class="proj-img proj-img--c fade-in" role="img" aria-label="Project image 3"></div>
-            <div class="proj-img proj-img--d fade-in" role="img" aria-label="Project image 4"></div>
-            <div class="proj-img proj-img--e fade-in" role="img" aria-label="Project image 5"></div>
-        </div>
-    </div>
-
-    <!-- Section 02: The Approach -->
-    <section class="section section--alt">
-        <div class="container">
-            <div class="proj-block fade-in">
-                <div class="proj-block__header">
-                    <h2 class="proj-block__title">The Approach</h2>
-                </div>
-                <div class="proj-block__body">
-                    <p class="proj-block__hook">Soft, glossy textures and monochromatic color palettes give an ethereal quality, while the objects themselves mimic real-world counterparts that people are familiar with.</p>
-                    <p>I looked back at the ways that tech has explained itself in the past. Apple's use of skeuomorphism was pivotal in making the digital landscape accessible for people to adopt into their daily lives. The minimal, flat design aesthetic that has been popular in design lately isn't effective in communicating dense subjects. I wanted there to be detail in my designs, the way skeuomorphism is, but I wanted to put a modern twist on it. Just making icons look like real-world objects, in the way Apple did in the early 2000's, was not going to demonstrate the modern ingenuity of the company.</p>
-                    <p>I achieved that modern look by finding a balance between flat illustration and photo realism. The objects are simplified slightly to increase legibility and help with scaling issues, but subtle textures, transparencies, and lighting create dimensionality. This allows the objects to feel tangible but not something you might find in the physical world. The Monochromatic yet detailed coloring also plays into this same effect.</p>
-                    <p>Integrating their AI agent, Wilson's, face into the icons also ties in the fact that all of these tools are part of their AI system. It lets the customer know that Wilson is connected to every part of the process.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Full Width Image -->
-    <div class="proj-images">
-        <div class="proj-img proj-img--full proj-img--f fade-in" role="img" aria-label="Project full-width feature image"></div>
-    </div>
-
-    <!-- Section 03: The Outcome + Results -->
-    <section class="section">
-        <div class="container">
-            <div class="proj-block fade-in">
-                <div class="proj-block__header">
-                    <h2 class="proj-block__title">The Outcome</h2>
-                </div>
-                <div class="proj-block__body">
-                    <p class="proj-block__hook">This project sets them up to expand on their identity and create a UI that is unique and innovative.</p>
-                    <p>What started as a simple "make us some icons" project turned into a world-building exercise. Instead of treating each icon as a one-off asset, I looked at how they all worked together and what they said about Cartage as a company. That shift helped the brand see the bigger picture of how to present itself to the world. The icons became a visual language that connects their AI, their tools, and the everyday work of their customers. Wilson went from being a feature to being a visible presence across the entire platform.</p>
-                    <p>The impact showed up quickly. Customers understood the platform faster, and calls for walkthroughs and tutorials dropped by 60%. That told me the icons were doing exactly what they were meant to do. Which is to make an advanced system feel approachable on day one. Beyond the numbers, the project gave Cartage a new perspective on how to think about their brand as a whole. They now have a foundation they can keep building on as they grow into a UI that is as unique and innovative as the technology behind it.</p>
-                </div>
-            </div>
-            <div class="proj-results fade-in">
-                <div class="proj-result">
-                    <span class="proj-result__num">60%</span>
-                    <span class="proj-result__label">Decrease in customers calling for walkthroughs and tutorials</span>
-                </div>
-                <div class="proj-result">
-                    <span class="proj-result__num">Improved</span>
-                    <span class="proj-result__label">Customer comprehension</span>
-                </div>
-                <div class="proj-result">
-                    <span class="proj-result__num">1</span>
-                    <span class="proj-result__label">Unified visual language across the entire platform UI</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Image Grid 03 - 2 col asymmetric (video + still) -->
-    <div class="proj-images">
-        <div class="proj-img-grid proj-img-grid--asym">
-            <div class="proj-img proj-img--video fade-in">
-                <video autoplay loop muted playsinline>
-                    <source src="images/cartage-vid.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="proj-img proj-img--h fade-in" role="img" aria-label="Project image 7"></div>
-        </div>
-    </div>
-
-    <!-- Next Project -->
-    <section class="proj-next">
-        <div class="container">
-            <div class="proj-next__label">
-                <span class="page-hero__label-rule"></span>
-                Next Project
-            </div>
-            <a href="proud-source-water.html" class="proj-next__card fade-in">
-                <div class="proj-next__img proj-next__img--proud-source" role="img" aria-label="Proud Source Water project preview"></div>
-                <div class="proj-next__info">
-                    <div class="proj-next__tags">
-                        <span class="tag">Brand Identity</span>
-                        <span class="tag">Marketing Strategy</span>
+                <section class="block" aria-labelledby="thinking">
+                    <h2 class="block__label label" id="thinking">The thinking</h2>
+                    <div class="block__body">
+                        <p class="block__lead">Skeuomorphism once made the digital world feel familiar. I wanted that level of detail, made modern.</p>
+                        <p>I looked back at the ways that tech has explained itself in the past. Apple's use of skeuomorphism was pivotal in making the digital landscape accessible for people to adopt into their daily lives. The minimal, flat design aesthetic that has been popular in design lately isn't effective in communicating dense subjects. I wanted there to be detail in my designs, the way skeuomorphism is, but I wanted to put a modern twist on it. Just making icons look like real-world objects, in the way Apple did in the early 2000's, was not going to demonstrate the modern ingenuity of the company.</p>
                     </div>
-                    <h2 class="proj-next__title">Proud Source Water</h2>
-                    <span class="proj-next__cta">View Project <span class="arrow">→</span></span>
+                </section>
+
+                <figure class="figs">
+                    <img src="images/Cartage/Panoramic-2400x1029.webp" alt="The full Cartage icon set: glossy, monochrome objects, each carrying Wilson's face" width="2400" height="1029" loading="lazy">
+                </figure>
+
+                <section class="block" aria-labelledby="system">
+                    <h2 class="block__label label" id="system">The system</h2>
+                    <div class="block__body">
+                        <p class="block__lead">Soft, glossy textures and monochromatic color palettes give an ethereal quality, while the objects themselves mimic real-world counterparts that people are familiar with.</p>
+                        <p>I achieved that modern look by finding a balance between flat illustration and photo realism. The objects are simplified slightly to increase legibility and help with scaling issues, but subtle textures, transparencies, and lighting create dimensionality. This allows the objects to feel tangible but not something you might find in the physical world. The Monochromatic yet detailed coloring also plays into this same effect.</p>
+                        <p>Integrating their AI agent, Wilson's, face into the icons also ties in the fact that all of these tools are part of their AI system. It lets the customer know that Wilson is connected to every part of the process.</p>
+                    </div>
+                </section>
+
+                <div class="figs figs--vids" style="grid-template-columns: 0.800fr 1.801fr">
+                    <figure style="aspect-ratio: 1080 / 1350"><video data-loop autoplay muted loop playsinline preload="metadata" poster="images/Cartage/Cartage_Quote-4x5-poster.webp" aria-label="Cartage social ad: a customer quote in a frosted glass card" width="1080" height="1350"><source src="images/Cartage/Cartage_Quote-4x5.mp4" type="video/mp4"></video></figure>
+                    <figure style="aspect-ratio: 1610 / 894"><video data-loop autoplay muted loop playsinline preload="metadata" poster="images/Cartage/cartage-vid-poster.webp" aria-label="Cartage 3D icons in motion" width="1610" height="894"><source src="images/Cartage/cartage-vid.mp4" type="video/mp4"></video></figure>
                 </div>
-            </a>
-        </div>
-    </section>
 
-    <!-- CTA Band -->
-    <div class="cta-band">
-        <div class="cta-band__bg" aria-hidden="true">LET'S GO</div>
-        <div class="container">
-            <div class="cta-band__inner">
-                <h2 class="cta-band__headline">Like what<br>you <em>see?</em></h2>
-                <a href="contact.html" class="btn btn--inverse">Start a Project <span class="arrow">→</span></a>
+                <section class="block" aria-labelledby="world">
+                    <h2 class="block__label label" id="world">In the world</h2>
+                    <div class="block__body">
+                        <p class="block__lead">This project sets them up to expand on their identity and create a UI that is unique and innovative.</p>
+                        <p>What started as a simple "make us some icons" project turned into a world-building exercise. Instead of treating each icon as a one-off asset, I looked at how they all worked together and what they said about Cartage as a company. That shift helped the brand see the bigger picture of how to present itself to the world. The icons became a visual language that connects their AI, their tools, and the everyday work of their customers. Wilson went from being a feature to being a visible presence across the entire platform.</p>
+                    </div>
+                </section>
+
+                <div class="figs figs--3">
+                    <figure><img src="images/Cartage/3_Column_Grid-800x600-1.webp" alt="Bus shelter ad with the Wilson icon: Fully Autonomous" width="800" height="600" loading="lazy"></figure>
+                    <figure><img src="images/Cartage/3_Column_Grid-800x600-2.webp" alt="Web page: I'm Wilson, your last logistics hire, with icon cards for Intelligence, Documents and Shipping" width="800" height="600" loading="lazy"></figure>
+                    <figure><img src="images/Cartage/3_Column_Grid-800x600-3.webp" alt="The Cartage desktop app with its icon dock on a laptop" width="800" height="600" loading="lazy"></figure>
+                </div>
+
+                <section class="block" aria-labelledby="results">
+                    <h2 class="block__label label" id="results">Results</h2>
+                    <div class="block__body">
+                        <dl class="stats">
+                            <div><dt class="label">Decrease in customers calling for walkthroughs and tutorials</dt><dd>60%</dd></div>
+                            <div><dt class="label">Unified visual language across the entire platform UI</dt><dd>1</dd></div>
+                        </dl>
+                        <p>The impact showed up quickly. Customers understood the platform faster, and calls for walkthroughs and tutorials dropped by 60%. That told me the icons were doing exactly what they were meant to do. Which is to make an advanced system feel approachable on day one. Beyond the numbers, the project gave Cartage a new perspective on how to think about their brand as a whole. They now have a foundation they can keep building on as they grow into a UI that is as unique and innovative as the technology behind it.</p>
+                    </div>
+                </section>
             </div>
-        </div>
-    </div>
 
-    <!-- Footer -->
+            <div class="wrap">
+                <a class="next" href="proud-source-water.html">
+                    <div>
+                        <span class="label">Next project</span>
+                        <p class="next__title">Proud Source Water</p>
+                    </div>
+                    <div class="card__media">
+                        <img src="images/Proud_Source/Project_Thumbnail-960x640.webp" alt="" width="960" height="640" loading="lazy">
+                    </div>
+                </a>
+            </div>
+        </article>
+    </main>
+
     <footer class="footer">
-        <div class="container">
-            <div class="footer__top">
-                <div class="footer__brand">
-                    <a href="index.html" class="footer__logo">MidDesign</a>
-                    <p class="footer__tagline">Graphic design that gets noticed.</p>
+        <div class="wrap">
+            <p class="footer__cta">Let's talk.</p>
+            <a class="footer__email" href="mailto:adrian.cole@middesignstudio.com">adrian.cole@middesignstudio.com</a>
+            <div class="footer__row">
+                <p>MidDesign is the independent practice of Adrian Cole. Designed and built by me, with Claude Code. © <span id="year">2026</span></p>
+                <div class="footer__links">
+                    <a href="https://www.linkedin.com/in/adrian-middesign/">LinkedIn</a>
+                    <a href="about.html">About</a>
                 </div>
-                <nav class="footer__nav">
-                    <div class="footer__col">
-                        <span class="footer__col-title">Navigate</span>
-                        <ul>
-                            <li><a href="work.html">Work</a></li>
-                            <li><a href="solutions.html">Solutions</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer__col">
-                        <span class="footer__col-title">Solutions</span>
-                        <ul>
-                            <li><a href="solutions.html">Brand Architecture</a></li>
-                            <li><a href="solutions.html">Visual Language</a></li>
-                            <li><a href="solutions.html">Brand Positioning</a></li>
-                            <li><a href="solutions.html">Campaign &amp; Activation</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer__col">
-                        <span class="footer__col-title">Connect</span>
-                        <ul>
-                            <li><a href="#">Instagram</a></li>
-                            <li><a href="#">Behance</a></li>
-                            <li><a href="https://www.linkedin.com/in/adrian-middesign/" target="_blank" rel="noopener">LinkedIn</a></li>
-                            <li><a href="mailto:adrian.cole@middesignstudio.com">Email</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-            <div class="footer__bottom">
-                <span>© 2026 MidDesign. All rights reserved. <a href="privacy.html">Privacy Policy</a></span>
-                <span>Designed with intention.</span>
             </div>
         </div>
     </footer>

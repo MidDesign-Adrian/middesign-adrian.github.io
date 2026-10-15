@@ -1,141 +1,100 @@
-// MidDesign — Portfolio Website Scripts
-
-
-// =========================================
-// ACTIVE NAV LINK — page-based
-// =========================================
-(function markActivePage() {
-    const page = document.body.dataset.page;
-    if (!page || page === 'home') return;
-    const link = document.querySelector(`.nav__links a[href="${page}.html"]`);
-    if (link && !link.classList.contains('nav__cta')) {
-        link.classList.add('active');
-    }
-})();
-
-// =========================================
-// MAGNETIC BUTTONS
-// =========================================
-const magnetBtns = document.querySelectorAll('.btn--primary');
-
-magnetBtns.forEach(btn => {
-    btn.addEventListener('mousemove', e => {
-        const rect = btn.getBoundingClientRect();
-        const x = e.clientX - rect.left - rect.width  / 2;
-        const y = e.clientY - rect.top  - rect.height / 2;
-        btn.style.transform = `translate(${x * 0.22}px, ${y * 0.28}px)`;
-    });
-
-    btn.addEventListener('mouseleave', () => {
-        btn.style.transition = 'transform 0.55s cubic-bezier(0.16, 1, 0.3, 1), background-position 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease';
-        btn.style.transform  = '';
-        setTimeout(() => { btn.style.transition = ''; }, 600);
-    });
-});
-
-// =========================================
-// NAVBAR: scrolled class
-// =========================================
+// Mobile menu
+const menuBtn = document.querySelector('.menu-btn');
 const nav = document.getElementById('nav');
 
-window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 40);
-}, { passive: true });
+if (menuBtn && nav) {
+    const mobile = window.matchMedia('(max-width: 640px)');
 
-// =========================================
-// MOBILE MENU TOGGLE
-// =========================================
-const hamburger   = document.getElementById('hamburger');
-const mobileMenu  = document.getElementById('mobileMenu');
-const mobileLinks = document.querySelectorAll('.mobile-link');
+    const setOpen = (open) => {
+        menuBtn.setAttribute('aria-expanded', String(open));
+        menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        nav.hidden = !open;
+    };
 
-function closeMenu() {
-    hamburger.classList.remove('open');
-    mobileMenu.classList.remove('open');
-    document.body.style.overflow = '';
-}
+    const sync = () => setOpen(false);
+    sync();
+    mobile.addEventListener('change', sync);
 
-hamburger.addEventListener('click', () => {
-    const isOpen = mobileMenu.classList.toggle('open');
-    hamburger.classList.toggle('open', isOpen);
-    document.body.style.overflow = isOpen ? 'hidden' : '';
-});
+    menuBtn.addEventListener('click', () => {
+        setOpen(menuBtn.getAttribute('aria-expanded') !== 'true');
+    });
 
-mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
-
-document.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && mobileMenu.classList.contains('open')) closeMenu();
-});
-
-// =========================================
-// SCROLL-IN ANIMATIONS
-// =========================================
-const fadeEls = document.querySelectorAll('.fade-in');
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && menuBtn.getAttribute('aria-expanded') === 'true') {
+            setOpen(false);
+            menuBtn.focus();
         }
     });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-fadeEls.forEach(el => observer.observe(el));
-
-// =========================================
-// WORK PAGE: FILTER BUTTON TOGGLE
-// =========================================
-const workFilters = document.querySelector('.work-filters');
-if (workFilters) {
-    workFilters.addEventListener('click', e => {
-        const btn = e.target.closest('.filter-btn');
-        if (!btn) return;
-        workFilters.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('is-active'));
-        btn.classList.add('is-active');
-    });
 }
 
-// =========================================
-// CONTACT FORM
-// =========================================
-const form        = document.getElementById('contactForm');
-const formSuccess = document.getElementById('formSuccess');
+// Header rule appears once the page scrolls
+const header = document.querySelector('.header');
+if (header) {
+    const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 8);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+}
 
-if (form) {
-    form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const btn      = form.querySelector('button[type="submit"]');
-        const origText = btn.innerHTML;
-        btn.disabled  = true;
-        btn.innerHTML = 'Sending&hellip;';
+// Looping videos: play only while on screen, and never for reduced motion
+const videos = document.querySelectorAll('video[data-loop]');
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-        try {
-            const response = await fetch(form.action, {
-                method:  'POST',
-                body:    new FormData(form),
-                headers: { 'Accept': 'application/json' }
+if (videos.length) {
+    if (reduceMotion.matches) {
+        videos.forEach((v) => { v.removeAttribute('autoplay'); v.pause(); });
+    } else if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(({ target, isIntersecting }) => {
+                if (isIntersecting) target.play().catch(() => {});
+                else target.pause();
             });
-
-            if (response.ok) {
-                form.reset();
-                btn.style.display         = 'none';
-                formSuccess.style.display = 'block';
-                setTimeout(() => {
-                    formSuccess.style.display = 'none';
-                    btn.style.display         = '';
-                    btn.disabled              = false;
-                    btn.innerHTML             = origText;
-                }, 6000);
-            } else {
-                btn.disabled  = false;
-                btn.innerHTML = origText;
-                alert('Something went wrong. Please try again or email adrian.cole@middesignstudio.com directly.');
-            }
-        } catch {
-            btn.disabled  = false;
-            btn.innerHTML = origText;
-            alert('Something went wrong. Please try again or email adrian.cole@middesignstudio.com directly.');
-        }
-    });
+        }, { threshold: 0.25 });
+        videos.forEach((v) => io.observe(v));
+    }
 }
+
+// Scroll reveal: show the second image once the figure is mostly on screen,
+// and reset only after it has fully left, so the swap replays on return
+const reveals = document.querySelectorAll('[data-reveal]');
+if (reveals.length && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(({ target, intersectionRatio }) => {
+            if (intersectionRatio >= 0.6) target.classList.add('is-revealed');
+            else if (intersectionRatio === 0) target.classList.remove('is-revealed');
+        });
+    }, { threshold: [0, 0.6] });
+    reveals.forEach((r) => io.observe(r));
+}
+
+// Video playlist: swap posters from the list, load YouTube only when asked
+document.querySelectorAll('[data-vplayer]').forEach((player) => {
+    const stage = player.querySelector('.vplayer__stage');
+    const items = player.querySelectorAll('.vplayer__item');
+
+    const play = (item) => {
+        items.forEach((i) => i.removeAttribute('aria-current'));
+        item.setAttribute('aria-current', 'true');
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://www.youtube-nocookie.com/embed/${item.dataset.id}?autoplay=1&rel=0&playsinline=1`;
+        iframe.title = item.querySelector('.vplayer__title').textContent;
+        iframe.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+        iframe.allowFullscreen = true;
+        stage.replaceChildren(iframe);
+    };
+
+    stage.addEventListener('click', (e) => {
+        const poster = e.target.closest('.vplayer__poster');
+        if (!poster) return;
+        e.preventDefault();
+        play(player.querySelector('.vplayer__item[aria-current="true"]') || items[0]);
+    });
+
+    items.forEach((item) => item.addEventListener('click', (e) => {
+        e.preventDefault();
+        play(item);
+    }));
+});
+
+// Footer year
+const year = document.getElementById('year');
+if (year) year.textContent = new Date().getFullYear();

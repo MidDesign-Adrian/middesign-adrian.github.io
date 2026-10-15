@@ -1,224 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1HKWVMP6Y9"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-1HKWVMP6Y9');
-    </script>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | MidDesign</title>
-    <link rel="icon" type="image/webp" href="images/Favicon.webp">
-    <link rel="apple-touch-icon" href="images/Favicon.webp">
-    <meta name="description" content="MidDesign is an independent design studio built on the belief that great design is communication, not decoration. Curious by nature, deliberate by process.">
-    <meta property="og:title" content="About | MidDesign">
-    <meta property="og:description" content="MidDesign is an independent design studio built on the belief that great design is communication, not decoration. Curious by nature, deliberate by process.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About | Adrian Cole</title>
+    <meta name="description" content="Adrian Cole is a San Francisco brand designer with eight years across B2B software, AI, healthcare and consumer brands. Off the clock: ceramics, film photography, woodworking and downhill skateboarding.">
+    <link rel="canonical" href="https://middesignstudio.com/about.html">
+    <meta property="og:title" content="About | Adrian Cole">
+    <meta property="og:description" content="Brand designer in San Francisco. Eight years across B2B software, AI, healthcare and consumer brands.">
+    <meta property="og:type" content="profile">
     <meta property="og:url" content="https://middesignstudio.com/about.html">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://middesignstudio.com/images/about-og.jpg">
+    <meta property="og:image" content="https://middesignstudio.com/images/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="MidDesign: Who am I?">
+    <meta property="og:image:alt" content="The MidDesign wordmark in white on black">
+    <meta property="og:site_name" content="Adrian Cole">
+    <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="About | MidDesign">
-    <meta name="twitter:description" content="MidDesign is an independent design studio built on the belief that great design is communication, not decoration. Curious by nature, deliberate by process.">
-    <meta name="twitter:image" content="https://middesignstudio.com/images/about-og.jpg">
-    <link rel="canonical" href="https://middesignstudio.com/about.html">
+    <meta name="theme-color" content="#F5F3EF">
+    <link rel="icon" href="images/Favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Jacquard+12&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body data-page="about">
+<body>
+    <a class="skip" href="#main">Skip to content</a>
 
-    <!-- Custom Cursor -->
-
-    <!-- Navigation -->
-    <nav class="nav" id="nav">
-        <a href="index.html" class="nav__logo">MidDesign</a>
-        <ul class="nav__links">
-            <li><a href="work.html">Work</a></li>
-            <li><a href="solutions.html">Solutions</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html" class="nav__cta">Start a Project</a></li>
-        </ul>
-        <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </nav>
-
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <ul>
-            <li><a href="work.html" class="mobile-link">Work</a></li>
-            <li><a href="solutions.html" class="mobile-link">Solutions</a></li>
-            <li><a href="about.html" class="mobile-link">About</a></li>
-            <li><a href="contact.html" class="mobile-link">Start a Project</a></li>
-        </ul>
-    </div>
-
-    <!-- Page Hero -->
-    <section class="page-hero">
-        <div class="page-hero__bg-text" aria-hidden="true">MID</div>
-        <div class="container">
-            <div class="page-hero__label">
-                <span class="page-hero__label-rule"></span>
-                The Studio
-            </div>
-            <h1 class="page-hero__title">About</h1>
-            <p class="page-hero__sub">Independent. Intentional. Built on the belief that design is strategy made visible.</p>
+    <header class="header">
+        <div class="wrap header__inner">
+            <a class="header__name" href="index.html" aria-label="Adrian Cole, home"><img src="images/Favicon.svg" alt="" width="48" height="48"></a>
+            <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+                <span class="menu-btn__bars" aria-hidden="true"></span>
+            </button>
+            <nav class="nav" id="nav" aria-label="Main">
+                <a href="index.html">Work</a>
+                <a href="play.html">Play</a>
+                <a href="about.html" aria-current="page">About</a>
+                <a href="mailto:adrian.cole@middesignstudio.com">Email</a>
+            </nav>
         </div>
-    </section>
+    </header>
 
-    <!-- About Layout -->
-    <section class="section">
-        <div class="container">
-            <div class="about-layout">
-                <div class="about-visual fade-in">
-                    <div class="about-img-wrap">
-                        <img src="images/IMG_1321.webp" alt="Adrian Cole" class="about-img">
-                    </div>
-                </div>
-                <div class="about-text fade-in">
-                    <h2 class="about-headline">Adrian Cole</h2>
-                    <p class="about-role" style="font-size: 0.875rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem;">Founder / Visual Designer</p>
-                    <p>
-                        I'm a multi-disciplinary visual designer with 7+ years of experience delivering creative solutions to clients across the world. Whether it's creating modern brand identities, building websites from the ground up, or developing visual marketing strategies, I have a proven ability to produce results.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <span class="stat__num">100's</span>
-                            <span class="stat__label">Projects Delivered</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat__num">50+</span>
-                            <span class="stat__label">Happy Clients</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat__num">7+</span>
-                            <span class="stat__label">Years Experience</span>
-                        </div>
-                    </div>
-                    <a href="contact.html" class="btn btn--primary">Work Together <span class="arrow">→</span></a>
+    <main id="main">
+
+        <section class="about-head wrap" aria-labelledby="about-title">
+            <div>
+                <h1 id="about-title">I design brand systems, and I make things with my hands.</h1>
+                <p>I'm a brand designer in San Francisco with eight years of experience across B2B software, AI, healthcare, and consumer brands. I've built identities from scratch, repositioned brand strategies, and run the brand system for a global scientific software company. I also spent two years in-house at Breg, a regulated health company, where I art directed an outside agency and presented creative decisions to senior leadership.</p>
+                <p>Away from the screen, I race downhill skateboards, work on skate shoots and edits, throw pots and build furniture. Making physical things keeps me excited about the creative process and teaches me about materials, textures, and more that I try to carry into my design work.</p>
+                <p>MidDesign is the name I work under as an independent designer. The name comes from an idea I keep coming back to: living in the middle of design. My design process is about embracing the process and remaining open to the natural flow of ideas so that I can create more authentic connections with audiences.</p>
+                <div class="links">
+                    <a class="btn btn--solid" href="mailto:adrian.cole@middesignstudio.com">Email me</a>
+                    <a class="btn" href="https://www.linkedin.com/in/adrian-middesign/">LinkedIn</a>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Philosophy Band -->
-    <section class="about-philosophy">
-        <div class="container">
-            <div class="page-hero__label fade-in">
-                <span class="page-hero__label-rule"></span>
-                Philosophy
+            <div class="about-head__portrait">
+                <img src="images/About/About-Portrait.webp" alt="Adrian Cole in a beanie and paint-flecked jeans, taking a mirror selfie against a warm plaster wall" width="1200" height="1500">
             </div>
-            <h2 class="about-philosophy__headline fade-in">
-                Living in the<br><em>middle</em> of design.
-            </h2>
-            <p class="about-philosophy__body fade-in">
-                MidDesign is an independent design studio built on the idea of living in the middle of design. Embracing the process, not just the outcome, allows for a deeper exploration of the subject matter. Staying invested in the work and remaining open to the natural flow of ideas creates a more authentic message that ultimately results in a better connection with your audience and a better growing business.
-            </p>
-            <p class="about-philosophy__body about-philosophy__body--closing fade-in">
-                The result is design that doesn't just look good… <span style="color: var(--accent);">it works.</span>
-            </p>
-            <div class="about-tenets fade-in">
-                <div class="tenet">
-                    <span class="tenet__title">Commit</span>
-                    <p class="tenet__desc">Approach every project with intention, paying attention to each design decision and how it impacts the overall system.</p>
-                </div>
-                <div class="tenet">
-                    <span class="tenet__title">Be Curious</span>
-                    <p class="tenet__desc">Explore new ideas, technologies, and perspectives to uncover distinctive solutions that push boundaries and elevate user experience.</p>
-                </div>
-                <div class="tenet">
-                    <span class="tenet__title">Have Fun</span>
-                    <p class="tenet__desc">Design with enthusiasm and authenticity. Designing personally inspired work will ultimately better resonate with audiences and leave lasting impressions.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Clients Grid -->
-    <section class="about-clients">
-        <div class="container">
-            <div class="section__header">
-                <div>
-                    <h2 class="section__title">Clients &amp; Collaborators</h2>
-                    <p class="section__sub">Brands I've had the pleasure of building with.</p>
-                </div>
-            </div>
+        <section class="section section--tight-top wrap" aria-labelledby="facts-title" style="padding-top:0">
+            <h2 class="visually-hidden" id="facts-title">At a glance</h2>
+            <dl class="facts" style="margin-top:0">
+                <div><dt class="label">Based in</dt><dd>San Francisco, Pacific Time</dd></div>
+                <div><dt class="label">Experience</dt><dd>8 years</dd></div>
+                <div><dt class="label">Focus</dt><dd>Brand systems, iconography, campaigns</dd></div>
+                <div><dt class="label">Education</dt><dd>San Diego State University, BA, Graphic Design emphasis</dd></div>
+            </dl>
+        </section>
 
-            <div class="about-clients__grid">
-                <div class="client-cell fade-in"><img class="client-logo" src="images/Logos/Argano_White_4-color.svg" alt="Argano"></div>
-                <div class="client-cell fade-in"><img class="client-logo" src="images/Logos/Cartage_Logo.svg" alt="Cartage"></div>
-                <div class="client-cell fade-in"><img class="client-logo" src="images/Logos/Del.svg" alt="Delinea"></div>
-                <div class="client-cell fade-in"><img class="client-logo" src="images/Logos/Dotmatics_Logo.svg" alt="Dotmatics"></div>
-                <div class="client-cell fade-in"><img class="client-logo" src="images/Logos/LOGO-OFF-WHITE-TRANSPARENT-BG.svg" alt="Client"></div>
-                <div class="client-cell fade-in"><img class="client-logo" src="images/Logos/logo-paychex.svg" alt="Paychex"></div>
-                <div class="client-cell fade-in"><img class="client-logo" src="images/Logos/Skona.svg" alt="Sköna"></div>
-                <div class="client-cell fade-in"><img class="client-logo" src="images/Logos/VER-Logo-FullSet_VER-Logo-Full-FlatColor.svg" alt="VER"></div>
+        <section class="section wrap" aria-labelledby="do-title">
+            <div class="section__head">
+                <h2 class="section__title" id="do-title">What I do</h2>
             </div>
-        </div>
-    </section>
+            <ul class="services">
+                <li><h3>Brand identity systems</h3><p>Logos, type, color and the rules that let a team use them without me in the room.</p></li>
+                <li><h3>Iconography</h3><p>Icon families from line sets for dense technical content to 3D systems for product UI.</p></li>
+                <li><h3>Campaigns and out-of-home</h3><p>From the core idea to billboards, booths, social and paid ads.</p></li>
+                <li><h3>Presentation and sales design</h3><p>Decks and templates that hold up when anyone in the company opens them.</p></li>
+                <li><h3>Web and digital</h3><p>Brand on the web, from page design to building it, like this site.</p></li>
+                <li><h3>Motion</h3><p>Storyboards and animation for campaigns and event environments.</p></li>
+            </ul>
+        </section>
 
-    <!-- CTA Band -->
-    <div class="cta-band">
-        <div class="cta-band__bg" aria-hidden="true">LET'S GO</div>
-        <div class="container">
-            <div class="cta-band__inner">
-                <h2 class="cta-band__headline">Let's build<br>something <em>together.</em></h2>
-                <a href="contact.html" class="btn btn--inverse">Start a Project <span class="arrow">→</span></a>
+        <section class="section wrap" aria-labelledby="exp-title">
+            <div class="section__head">
+                <h2 class="section__title" id="exp-title">Experience</h2>
             </div>
-        </div>
-    </div>
+            <div class="timeline-group">
+                <h3 class="timeline-group__title label" id="exp-inhouse">In-house</h3>
+                <ol class="timeline" aria-labelledby="exp-inhouse">
+                    <li><span class="timeline__org">Breg Inc.</span><span class="timeline__role">Brand Designer</span><span class="timeline__years">2022–2024</span></li>
+                </ol>
+            </div>
+            <div class="timeline-group">
+                <h3 class="timeline-group__title label" id="exp-client">Client work</h3>
+                <ol class="timeline" aria-labelledby="exp-client">
+                    <li><span class="timeline__org">Proud Source Water</span><span class="timeline__role">Lead Brand Designer</span><span class="timeline__years">2026</span></li>
+                    <li><span class="timeline__org">Cartage</span><span class="timeline__role">Brand and Product Designer</span><span class="timeline__years">2025–now</span></li>
+                    <li><span class="timeline__org">Dotmatics</span><span class="timeline__role">Senior Visual Designer</span><span class="timeline__years">2020–now</span></li>
+                </ol>
+            </div>
+            <div class="timeline-group">
+                <h3 class="timeline-group__title label" id="exp-agency">Agency</h3>
+                <ol class="timeline" aria-labelledby="exp-agency">
+                    <li><span class="timeline__org">Sköna</span><span class="timeline__role">Brand Designer</span><span class="timeline__years">2021–now</span></li>
+                    <li><span class="timeline__org">Enne Bí Communications</span><span class="timeline__role">Graphic Designer</span><span class="timeline__years">2020–2021</span></li>
+                </ol>
+            </div>
+        </section>
 
-    <!-- Footer -->
+    </main>
+
     <footer class="footer">
-        <div class="container">
-            <div class="footer__top">
-                <div class="footer__brand">
-                    <a href="index.html" class="footer__logo">MidDesign</a>
-                    <p class="footer__tagline">Design that thinks before it speaks.</p>
+        <div class="wrap">
+            <p class="footer__cta">Let's talk.</p>
+            <a class="footer__email" href="mailto:adrian.cole@middesignstudio.com">adrian.cole@middesignstudio.com</a>
+            <div class="footer__row">
+                <p>MidDesign is the independent practice of Adrian Cole. Designed and built by me, with Claude Code. © <span id="year">2026</span></p>
+                <div class="footer__links">
+                    <a href="https://www.linkedin.com/in/adrian-middesign/">LinkedIn</a>
+                    <a href="index.html">Work</a>
                 </div>
-                <nav class="footer__nav">
-                    <div class="footer__col">
-                        <span class="footer__col-title">Navigate</span>
-                        <ul>
-                            <li><a href="work.html">Work</a></li>
-                            <li><a href="solutions.html">Solutions</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer__col">
-                        <span class="footer__col-title">Solutions</span>
-                        <ul>
-                            <li><a href="solutions.html">Brand Architecture</a></li>
-                            <li><a href="solutions.html">Visual Language</a></li>
-                            <li><a href="solutions.html">Brand Positioning</a></li>
-                            <li><a href="solutions.html">Campaign &amp; Activation</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer__col">
-                        <span class="footer__col-title">Connect</span>
-                        <ul>
-                            <li><a href="#">Instagram</a></li>
-                            <li><a href="#">Behance</a></li>
-                            <li><a href="https://www.linkedin.com/in/adrian-middesign/" target="_blank" rel="noopener">LinkedIn</a></li>
-                            <li><a href="mailto:adrian.cole@middesignstudio.com">Email</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-            <div class="footer__bottom">
-                <span>© 2026 MidDesign. All rights reserved. <a href="privacy.html">Privacy Policy</a></span>
-                <span>Designed with intention.</span>
             </div>
         </div>
     </footer>
